@@ -1,0 +1,12 @@
+2018-06-15 12:55:16,648:DEBUG:__main__:hello ravi i am in log
+2018-06-15 12:55:16,648:ERROR:__main__:hello this application is running
+2018-06-15 12:55:34,055:DEBUG:__main__:hello ravi i am in log
+2018-06-15 12:55:34,055:ERROR:__main__:hello this application is running
+2018-06-15 12:55:44,548:DEBUG:__main__:hello ravi i am in log
+2018-06-15 12:55:44,548:ERROR:__main__:hello this application is running
+2018-06-15 12:55:50,118:DEBUG:__main__:hello ravi i am in log
+2018-06-15 12:55:50,118:ERROR:__main__:hello this application is running
+2018-06-15 12:55:57,177:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 12:57:26,855:DEBUG:__main__:hello ravi i am in log
+2018-06-15 12:57:26,855:ERROR:__main__:hello this application is running
+2018-06-15 12:57:28,904:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)

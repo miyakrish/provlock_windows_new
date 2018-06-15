@@ -12,20 +12,20 @@ from PySide import QtCore, QtGui
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(375, 375)
-        Dialog.setMaximumSize(375,375)
+        Dialog.resize(500, 200)
+        Dialog.setMaximumSize(500,200)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Maximum, QtGui.QSizePolicy.Maximum)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(Dialog.sizePolicy().hasHeightForWidth())
         Dialog.setSizePolicy(sizePolicy)
-        Dialog.setMaximumSize(QtCore.QSize(375, 375))
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(":/icons/favicon.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        Dialog.setWindowIcon(icon)
-        Dialog.setLayoutDirection(QtCore.Qt.LeftToRight)
+        Dialog.setMaximumSize(QtCore.QSize(500, 200))
+        #icon = QtGui.QIcon()
+        #icon.addPixmap(QtGui.QPixmap(":/icons/favicon.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        #Dialog.setWindowIcon(icon)
+        #Dialog.setLayoutDirection(QtCore.Qt.LeftToRight)
         Dialog.setAutoFillBackground(False)
-        Dialog.setStyleSheet("background-color: rgb(112, 112, 112);")
+        Dialog.setStyleSheet("background-color: #B1B1B1, color:#000;")
         self.verticalLayout_2 = QtGui.QVBoxLayout(Dialog)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         spacerItem = QtGui.QSpacerItem(20, 40, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Expanding)
@@ -42,7 +42,7 @@ class Ui_Dialog(object):
         self.label.setStyleSheet("color: rgb(170, 0, 0);\n"
 "font: 75 10pt \"MS Shell Dlg 2\";")
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap(":/icons/ProvLogo.png"))
+        #self.label.setPixmap(QtGui.QPixmap(":/icons/ProvLogo.png"))
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
         self.verticalLayout.addWidget(self.label)
@@ -62,13 +62,13 @@ class Ui_Dialog(object):
         self.lineEdit.setSizePolicy(sizePolicy)
         self.lineEdit.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "border-width: 2px;\n"
-"border-radius: 10px;\n"
-"border-color: #aa0000;\n"
+"border-radius: 2px;\n"
+"border-color: #ccc;\n"
 "min-width: 8em;\n"
 "padding: 4px;\n"
-"color: rgb(170, 0, 0);\n"
-"font: 75 10pt \"MS Shell Dlg 2\";")
-        self.lineEdit.setText("")
+"color: #333;\n"
+"font: 75 10pt \"Roboto \";")
+        self.lineEdit.setText("ENTER ACCESS CODE")
         self.lineEdit.setObjectName("lineEdit")
         self.verticalLayout.addWidget(self.lineEdit)
         spacerItem2 = QtGui.QSpacerItem(20, 40, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Expanding)
@@ -79,28 +79,28 @@ class Ui_Dialog(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.pushButtonSubmit.sizePolicy().hasHeightForWidth())
         self.pushButtonSubmit.setSizePolicy(sizePolicy)
-        self.pushButtonSubmit.setMinimumSize(QtCore.QSize(114, 28))
+        self.pushButtonSubmit.setMinimumSize(QtCore.QSize(327, 20))
         self.pushButtonSubmit.setStyleSheet("\n"
 "QPushButton#pushButtonSubmit {\n"
-"    background-color: rgb(255, 255, 255);\n"
+"    background-color: #E6232C;\n"
 "    border-style: outset;\n"
-"    border-width: 2px;\n"
-"    border-radius: 10px;\n"
-"    border-color: beige;\n"
-"    color: rgb(170, 0, 0);\n"
+"    border-width: 1px;\n"
+"    border-radius: 2px;\n"
+"    border-color: 1px solid #E6232C;\n"
+"    color: #ffffff;\n"
 "    font: bold 14px;\n"
 "    min-width: 6em;\n"
 "    padding: 4px;\n"
 "}\n"
 "QPushButton#pushButtonSubmit:pressed {\n"
 "   \n"
-"    background-color: rgb(255, 0, 0);\n"
-"    color: rgb(0, 0, 0);\n"
+"    background-color: #E6232C;\n"
+"    color: #ffffff;\n"
 "    border-style: inset;\n"
 "}")
         self.pushButtonSubmit.setObjectName("pushButtonSubmit")
         self.verticalLayout.addWidget(self.pushButtonSubmit)
-        spacerItem3 = QtGui.QSpacerItem(20, 40, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Expanding)
+        spacerItem3 = QtGui.QSpacerItem(30, 40, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Expanding)
         self.verticalLayout.addItem(spacerItem3)
         self.verticalLayout_2.addLayout(self.verticalLayout)
 
@@ -109,7 +109,7 @@ class Ui_Dialog(object):
 
     def retranslateUi(self, Dialog):
         Dialog.setWindowTitle(QtGui.QApplication.translate("Dialog", "Dialog", None, QtGui.QApplication.UnicodeUTF8))
-        self.label_info.setText(QtGui.QApplication.translate("Dialog", "PLEASE, ENTER ACCESS CODE", None, QtGui.QApplication.UnicodeUTF8))
-        self.pushButtonSubmit.setText(QtGui.QApplication.translate("Dialog", "Submit", None, QtGui.QApplication.UnicodeUTF8))
+        self.label_info.setText(QtGui.QApplication.translate("Dialog", "PLEASE ENTER ACCESS CODE", None, QtGui.QApplication.UnicodeUTF8))
+        self.pushButtonSubmit.setText(QtGui.QApplication.translate("Dialog", "->", None, QtGui.QApplication.UnicodeUTF8))
 
 import icons_rc
