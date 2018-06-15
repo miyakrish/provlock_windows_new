@@ -10,3 +10,408 @@
 2018-06-15 12:57:26,855:DEBUG:__main__:hello ravi i am in log
 2018-06-15 12:57:26,855:ERROR:__main__:hello this application is running
 2018-06-15 12:57:28,904:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 13:12:43,075:DEBUG:__main__:hello ravi i am in log
+2018-06-15 13:12:43,075:ERROR:__main__:hello this application is running
+2018-06-15 13:12:45,450:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 13:21:46,533:DEBUG:__main__:hello ravi i am in log
+2018-06-15 13:21:46,533:ERROR:__main__:hello this application is running
+2018-06-15 13:37:39,986:DEBUG:__main__:hello ravi i am in log
+2018-06-15 13:37:39,986:ERROR:__main__:hello this application is running
+2018-06-15 13:40:23,611:DEBUG:__main__:hello ravi i am in log
+2018-06-15 13:40:23,611:ERROR:__main__:hello this application is running
+2018-06-15 13:40:25,789:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 13:44:52,450:DEBUG:__main__:hello ravi i am in log
+2018-06-15 13:44:52,450:ERROR:__main__:hello this application is running
+2018-06-15 13:44:54,855:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 13:48:50,681:DEBUG:__main__:hello ravi i am in log
+2018-06-15 13:48:50,681:ERROR:__main__:hello this application is running
+2018-06-15 13:48:52,973:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 13:53:47,131:DEBUG:__main__:hello ravi i am in log
+2018-06-15 13:53:47,131:ERROR:__main__:hello this application is running
+2018-06-15 13:53:49,401:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 13:57:09,971:DEBUG:__main__:hello ravi i am in log
+2018-06-15 13:57:09,971:ERROR:__main__:hello this application is running
+2018-06-15 13:57:48,312:DEBUG:__main__:hello ravi i am in log
+2018-06-15 13:57:48,312:ERROR:__main__:hello this application is running
+2018-06-15 13:57:50,243:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 14:02:40,951:DEBUG:__main__:hello ravi i am in log
+2018-06-15 14:02:40,951:ERROR:__main__:hello this application is running
+2018-06-15 14:02:43,272:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 14:04:00,839:DEBUG:__main__:hello ravi i am in log
+2018-06-15 14:04:00,839:ERROR:__main__:hello this application is running
+2018-06-15 14:04:02,812:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 14:07:03,055:DEBUG:__main__:hello ravi i am in log
+2018-06-15 14:07:03,055:ERROR:__main__:hello this application is running
+2018-06-15 14:07:05,354:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 14:10:37,615:DEBUG:__main__:hello ravi i am in log
+2018-06-15 14:10:37,615:ERROR:__main__:hello this application is running
+2018-06-15 14:10:39,918:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 14:11:52,686:DEBUG:__main__:hello ravi i am in log
+2018-06-15 14:11:52,686:ERROR:__main__:hello this application is running
+2018-06-15 14:11:54,690:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 14:13:36,694:DEBUG:__main__:hello ravi i am in log
+2018-06-15 14:13:36,694:ERROR:__main__:hello this application is running
+2018-06-15 14:13:38,642:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 14:14:15,194:DEBUG:__main__:hello ravi i am in log
+2018-06-15 14:14:15,194:ERROR:__main__:hello this application is running
+2018-06-15 14:14:17,154:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 14:15:44,795:DEBUG:__main__:hello ravi i am in log
+2018-06-15 14:15:44,795:ERROR:__main__:hello this application is running
+2018-06-15 14:15:46,789:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 14:16:12,572:DEBUG:__main__:hello ravi i am in log
+2018-06-15 14:16:12,572:ERROR:__main__:hello this application is running
+2018-06-15 14:16:14,569:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 14:17:44,930:DEBUG:__main__:hello ravi i am in log
+2018-06-15 14:17:44,930:ERROR:__main__:hello this application is running
+2018-06-15 14:17:46,941:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 14:18:32,407:DEBUG:__main__:hello ravi i am in log
+2018-06-15 14:18:32,407:ERROR:__main__:hello this application is running
+2018-06-15 14:18:34,398:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 14:19:49,428:DEBUG:__main__:hello ravi i am in log
+2018-06-15 14:19:49,428:ERROR:__main__:hello this application is running
+2018-06-15 14:19:51,469:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 14:21:31,368:DEBUG:__main__:hello ravi i am in log
+2018-06-15 14:21:31,368:ERROR:__main__:hello this application is running
+2018-06-15 14:21:33,667:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 14:30:31,148:DEBUG:__main__:hello ravi i am in log
+2018-06-15 14:30:31,157:ERROR:__main__:hello this application is running
+2018-06-15 14:33:39,786:DEBUG:__main__:hello ravi i am in log
+2018-06-15 14:33:39,786:ERROR:__main__:hello this application is running
+2018-06-15 14:34:14,095:DEBUG:__main__:hello ravi i am in log
+2018-06-15 14:34:14,095:ERROR:__main__:hello this application is running
+2018-06-15 14:34:16,130:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 14:35:27,506:DEBUG:__main__:hello ravi i am in log
+2018-06-15 14:35:27,506:ERROR:__main__:hello this application is running
+2018-06-15 14:35:29,538:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 15:01:16,576:DEBUG:__main__:hello ravi i am in log
+2018-06-15 15:01:16,576:ERROR:__main__:hello this application is running
+2018-06-15 15:01:19,042:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 15:02:05,073:DEBUG:__main__:hello ravi i am in log
+2018-06-15 15:02:05,073:ERROR:__main__:hello this application is running
+2018-06-15 15:02:07,128:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 15:03:01,279:DEBUG:__main__:hello ravi i am in log
+2018-06-15 15:03:01,279:ERROR:__main__:hello this application is running
+2018-06-15 15:03:03,305:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 15:05:29,121:DEBUG:__main__:hello ravi i am in log
+2018-06-15 15:05:29,121:ERROR:__main__:hello this application is running
+2018-06-15 15:05:31,486:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 15:08:16,719:DEBUG:__main__:hello ravi i am in log
+2018-06-15 15:08:16,719:ERROR:__main__:hello this application is running
+2018-06-15 15:08:19,019:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 15:09:44,846:DEBUG:__main__:hello ravi i am in log
+2018-06-15 15:09:44,846:ERROR:__main__:hello this application is running
+2018-06-15 15:09:46,884:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 15:10:56,819:DEBUG:__main__:hello ravi i am in log
+2018-06-15 15:10:56,819:ERROR:__main__:hello this application is running
+2018-06-15 15:10:58,829:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 15:17:04,785:DEBUG:__main__:hello ravi i am in log
+2018-06-15 15:17:04,785:ERROR:__main__:hello this application is running
+2018-06-15 15:17:07,108:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 15:21:39,167:DEBUG:__main__:hello ravi i am in log
+2018-06-15 15:21:39,167:ERROR:__main__:hello this application is running
+2018-06-15 15:21:41,493:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 15:43:48,164:DEBUG:__main__:hello ravi i am in log
+2018-06-15 15:43:48,164:ERROR:__main__:hello this application is running
+2018-06-15 15:46:11,716:DEBUG:__main__:hello ravi i am in log
+2018-06-15 15:46:11,716:ERROR:__main__:hello this application is running
+2018-06-15 15:46:39,227:DEBUG:__main__:hello ravi i am in log
+2018-06-15 15:46:39,227:ERROR:__main__:hello this application is running
+2018-06-15 15:46:41,329:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 15:48:17,092:DEBUG:__main__:hello ravi i am in log
+2018-06-15 15:48:17,092:ERROR:__main__:hello this application is running
+2018-06-15 15:48:19,105:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 15:53:13,676:DEBUG:__main__:hello ravi i am in log
+2018-06-15 15:53:13,676:ERROR:__main__:hello this application is running
+2018-06-15 15:53:15,989:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 15:57:49,173:DEBUG:__main__:hello ravi i am in log
+2018-06-15 15:57:49,173:ERROR:__main__:hello this application is running
+2018-06-15 15:57:51,520:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 16:01:35,683:DEBUG:__main__:hello ravi i am in log
+2018-06-15 16:01:35,683:ERROR:__main__:hello this application is running
+2018-06-15 16:01:38,013:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 16:02:47,055:DEBUG:__main__:hello ravi i am in log
+2018-06-15 16:02:47,055:ERROR:__main__:hello this application is running
+2018-06-15 16:02:49,071:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 16:03:45,243:DEBUG:__main__:hello ravi i am in log
+2018-06-15 16:03:45,243:ERROR:__main__:hello this application is running
+2018-06-15 16:03:47,259:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 16:05:16,025:DEBUG:__main__:hello ravi i am in log
+2018-06-15 16:05:16,025:ERROR:__main__:hello this application is running
+2018-06-15 16:05:18,039:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 16:05:38,808:DEBUG:__main__:hello ravi i am in log
+2018-06-15 16:05:38,808:ERROR:__main__:hello this application is running
+2018-06-15 16:05:40,823:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 16:06:18,980:DEBUG:__main__:hello ravi i am in log
+2018-06-15 16:06:18,980:ERROR:__main__:hello this application is running
+2018-06-15 16:06:20,984:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 16:07:13,381:DEBUG:__main__:hello ravi i am in log
+2018-06-15 16:07:13,381:ERROR:__main__:hello this application is running
+2018-06-15 16:08:11,539:DEBUG:__main__:hello ravi i am in log
+2018-06-15 16:08:11,539:ERROR:__main__:hello this application is running
+2018-06-15 16:08:13,532:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 16:11:27,953:DEBUG:__main__:hello ravi i am in log
+2018-06-15 16:11:27,953:ERROR:__main__:hello this application is running
+2018-06-15 16:11:30,240:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 16:14:26,710:DEBUG:__main__:hello ravi i am in log
+2018-06-15 16:14:26,710:ERROR:__main__:hello this application is running
+2018-06-15 16:24:02,621:DEBUG:__main__:hello ravi i am in log
+2018-06-15 16:24:02,621:ERROR:__main__:hello this application is running
+2018-06-15 16:24:04,953:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 16:28:46,346:DEBUG:__main__:hello ravi i am in log
+2018-06-15 16:28:46,346:ERROR:__main__:hello this application is running
+2018-06-15 16:28:48,384:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 16:29:58,421:DEBUG:__main__:hello ravi i am in log
+2018-06-15 16:29:58,421:ERROR:__main__:hello this application is running
+2018-06-15 16:30:00,493:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 16:30:39,013:DEBUG:__main__:hello ravi i am in log
+2018-06-15 16:30:39,013:ERROR:__main__:hello this application is running
+2018-06-15 16:30:40,997:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 16:31:57,372:DEBUG:__main__:hello ravi i am in log
+2018-06-15 16:31:57,372:ERROR:__main__:hello this application is running
+2018-06-15 16:31:59,428:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 16:37:31,490:DEBUG:__main__:hello ravi i am in log
+2018-06-15 16:37:31,490:ERROR:__main__:hello this application is running
+2018-06-15 16:37:33,852:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 16:38:59,451:DEBUG:__main__:hello ravi i am in log
+2018-06-15 16:38:59,451:ERROR:__main__:hello this application is running
+2018-06-15 16:39:01,510:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 16:41:10,573:DEBUG:__main__:hello ravi i am in log
+2018-06-15 16:41:10,573:ERROR:__main__:hello this application is running
+2018-06-15 16:41:12,924:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 16:44:32,141:DEBUG:__main__:hello ravi i am in log
+2018-06-15 16:44:32,141:ERROR:__main__:hello this application is running
+2018-06-15 16:44:34,473:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 16:46:40,124:DEBUG:__main__:hello ravi i am in log
+2018-06-15 16:46:40,124:ERROR:__main__:hello this application is running
+2018-06-15 16:46:42,150:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 16:51:38,687:DEBUG:__main__:hello ravi i am in log
+2018-06-15 16:51:38,687:ERROR:__main__:hello this application is running
+2018-06-15 16:51:41,016:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 16:54:16,665:DEBUG:__main__:hello ravi i am in log
+2018-06-15 16:54:16,665:ERROR:__main__:hello this application is running
+2018-06-15 16:54:18,979:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 16:56:14,641:DEBUG:__main__:hello ravi i am in log
+2018-06-15 16:56:14,657:ERROR:__main__:hello this application is running
+2018-06-15 16:56:16,690:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 16:58:23,137:DEBUG:__main__:hello ravi i am in log
+2018-06-15 16:58:23,137:ERROR:__main__:hello this application is running
+2018-06-15 16:58:25,487:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 17:00:35,210:DEBUG:__main__:hello ravi i am in log
+2018-06-15 17:00:35,210:ERROR:__main__:hello this application is running
+2018-06-15 17:02:16,049:DEBUG:__main__:hello ravi i am in log
+2018-06-15 17:02:16,049:ERROR:__main__:hello this application is running
+2018-06-15 17:02:18,365:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 17:03:51,549:DEBUG:__main__:hello ravi i am in log
+2018-06-15 17:03:51,549:ERROR:__main__:hello this application is running
+2018-06-15 17:03:53,905:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 17:05:12,361:DEBUG:__main__:hello ravi i am in log
+2018-06-15 17:05:12,361:ERROR:__main__:hello this application is running
+2018-06-15 17:05:14,395:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 17:06:00,632:DEBUG:__main__:hello ravi i am in log
+2018-06-15 17:06:00,632:ERROR:__main__:hello this application is running
+2018-06-15 17:06:02,815:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 17:06:47,286:DEBUG:__main__:hello ravi i am in log
+2018-06-15 17:06:47,286:ERROR:__main__:hello this application is running
+2018-06-15 17:06:49,315:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 17:08:21,171:DEBUG:__main__:hello ravi i am in log
+2018-06-15 17:08:21,171:ERROR:__main__:hello this application is running
+2018-06-15 17:08:23,507:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 17:09:35,548:DEBUG:__main__:hello ravi i am in log
+2018-06-15 17:09:35,548:ERROR:__main__:hello this application is running
+2018-06-15 17:09:37,562:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 17:10:21,948:DEBUG:__main__:hello ravi i am in log
+2018-06-15 17:10:21,948:ERROR:__main__:hello this application is running
+2018-06-15 17:10:23,959:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 17:11:18,948:DEBUG:__main__:hello ravi i am in log
+2018-06-15 17:11:18,948:ERROR:__main__:hello this application is running
+2018-06-15 17:11:20,977:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 17:12:07,895:DEBUG:__main__:hello ravi i am in log
+2018-06-15 17:12:07,895:ERROR:__main__:hello this application is running
+2018-06-15 17:12:09,940:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 17:14:16,713:DEBUG:__main__:hello ravi i am in log
+2018-06-15 17:14:16,713:ERROR:__main__:hello this application is running
+2018-06-15 17:14:18,760:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 17:15:42,500:DEBUG:__main__:hello ravi i am in log
+2018-06-15 17:15:42,500:ERROR:__main__:hello this application is running
+2018-06-15 17:15:44,513:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 17:17:24,111:DEBUG:__main__:hello ravi i am in log
+2018-06-15 17:17:24,111:ERROR:__main__:hello this application is running
+2018-06-15 17:17:26,112:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 17:30:28,440:DEBUG:__main__:hello ravi i am in log
+2018-06-15 17:30:28,440:ERROR:__main__:hello this application is running
+2018-06-15 17:31:13,834:DEBUG:__main__:hello ravi i am in log
+2018-06-15 17:31:13,834:ERROR:__main__:hello this application is running
+2018-06-15 17:31:31,453:DEBUG:__main__:hello ravi i am in log
+2018-06-15 17:31:31,453:ERROR:__main__:hello this application is running
+2018-06-15 17:31:33,519:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 17:32:28,437:DEBUG:__main__:hello ravi i am in log
+2018-06-15 17:32:28,437:ERROR:__main__:hello this application is running
+2018-06-15 17:32:30,470:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 17:37:17,285:DEBUG:__main__:hello ravi i am in log
+2018-06-15 17:37:17,285:ERROR:__main__:hello this application is running
+2018-06-15 17:37:19,586:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 17:37:51,150:DEBUG:__main__:hello ravi i am in log
+2018-06-15 17:37:51,150:ERROR:__main__:hello this application is running
+2018-06-15 17:37:53,201:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 17:41:01,709:DEBUG:__main__:hello ravi i am in log
+2018-06-15 17:41:01,709:ERROR:__main__:hello this application is running
+2018-06-15 17:41:04,091:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 17:44:56,154:DEBUG:__main__:hello ravi i am in log
+2018-06-15 17:44:56,154:ERROR:__main__:hello this application is running
+2018-06-15 17:44:58,507:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 17:47:59,003:DEBUG:__main__:hello ravi i am in log
+2018-06-15 17:47:59,003:ERROR:__main__:hello this application is running
+2018-06-15 17:48:08,250:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 17:51:30,315:DEBUG:__main__:hello ravi i am in log
+2018-06-15 17:51:30,315:ERROR:__main__:hello this application is running
+2018-06-15 17:51:38,117:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 17:54:18,907:DEBUG:__main__:hello ravi i am in log
+2018-06-15 17:54:18,907:ERROR:__main__:hello this application is running
+2018-06-15 17:54:22,385:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 17:59:30,480:DEBUG:__main__:hello ravi i am in log
+2018-06-15 17:59:30,480:ERROR:__main__:hello this application is running
+2018-06-15 17:59:32,835:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 18:00:19,605:DEBUG:__main__:hello ravi i am in log
+2018-06-15 18:00:19,605:ERROR:__main__:hello this application is running
+2018-06-15 18:00:21,595:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 18:15:12,573:DEBUG:__main__:hello ravi i am in log
+2018-06-15 18:15:12,573:ERROR:__main__:hello this application is running
+2018-06-15 18:15:14,907:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 18:19:05,540:DEBUG:__main__:hello ravi i am in log
+2018-06-15 18:19:05,540:ERROR:__main__:hello this application is running
+2018-06-15 18:19:07,855:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 18:23:57,187:DEBUG:__main__:hello ravi i am in log
+2018-06-15 18:23:57,187:ERROR:__main__:hello this application is running
+2018-06-15 18:23:59,529:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 18:24:36,484:DEBUG:__main__:hello ravi i am in log
+2018-06-15 18:24:36,484:ERROR:__main__:hello this application is running
+2018-06-15 18:24:38,469:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 18:34:25,845:DEBUG:__main__:hello ravi i am in log
+2018-06-15 18:34:25,845:ERROR:__main__:hello this application is running
+2018-06-15 18:34:28,180:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 18:35:46,328:DEBUG:__main__:hello ravi i am in log
+2018-06-15 18:35:46,328:ERROR:__main__:hello this application is running
+2018-06-15 18:35:48,346:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 18:36:20,338:DEBUG:__main__:hello ravi i am in log
+2018-06-15 18:36:20,338:ERROR:__main__:hello this application is running
+2018-06-15 18:36:22,345:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 18:36:55,305:DEBUG:__main__:hello ravi i am in log
+2018-06-15 18:36:55,305:ERROR:__main__:hello this application is running
+2018-06-15 18:36:57,285:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 18:37:29,565:DEBUG:__main__:hello ravi i am in log
+2018-06-15 18:37:29,565:ERROR:__main__:hello this application is running
+2018-06-15 18:37:31,607:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 18:39:30,736:DEBUG:__main__:hello ravi i am in log
+2018-06-15 18:39:30,736:ERROR:__main__:hello this application is running
+2018-06-15 18:39:32,772:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 18:40:09,568:DEBUG:__main__:hello ravi i am in log
+2018-06-15 18:40:09,568:ERROR:__main__:hello this application is running
+2018-06-15 18:40:11,592:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 18:41:11,872:DEBUG:__main__:hello ravi i am in log
+2018-06-15 18:41:11,872:ERROR:__main__:hello this application is running
+2018-06-15 18:41:13,890:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 18:42:13,832:DEBUG:__main__:hello ravi i am in log
+2018-06-15 18:42:13,832:ERROR:__main__:hello this application is running
+2018-06-15 18:42:15,818:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 18:43:07,536:DEBUG:__main__:hello ravi i am in log
+2018-06-15 18:43:07,536:ERROR:__main__:hello this application is running
+2018-06-15 18:43:09,565:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 18:43:41,829:DEBUG:__main__:hello ravi i am in log
+2018-06-15 18:43:41,829:ERROR:__main__:hello this application is running
+2018-06-15 18:43:43,857:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 18:44:46,931:DEBUG:__main__:hello ravi i am in log
+2018-06-15 18:44:46,931:ERROR:__main__:hello this application is running
+2018-06-15 18:44:48,913:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 18:48:12,380:DEBUG:__main__:hello ravi i am in log
+2018-06-15 18:48:12,380:ERROR:__main__:hello this application is running
+2018-06-15 18:48:14,697:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 18:49:25,296:DEBUG:__main__:hello ravi i am in log
+2018-06-15 18:49:25,296:ERROR:__main__:hello this application is running
+2018-06-15 18:49:27,295:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 18:51:09,239:DEBUG:__main__:hello ravi i am in log
+2018-06-15 18:51:09,239:ERROR:__main__:hello this application is running
+2018-06-15 18:51:11,217:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 18:51:49,507:DEBUG:__main__:hello ravi i am in log
+2018-06-15 18:51:49,507:ERROR:__main__:hello this application is running
+2018-06-15 18:51:51,497:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 18:52:49,328:DEBUG:__main__:hello ravi i am in log
+2018-06-15 18:52:49,328:ERROR:__main__:hello this application is running
+2018-06-15 18:52:51,357:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 18:53:16,914:DEBUG:__main__:hello ravi i am in log
+2018-06-15 18:53:16,914:ERROR:__main__:hello this application is running
+2018-06-15 18:53:18,943:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 18:54:21,348:DEBUG:__main__:hello ravi i am in log
+2018-06-15 18:54:21,348:ERROR:__main__:hello this application is running
+2018-06-15 18:54:23,335:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 18:54:54,112:DEBUG:__main__:hello ravi i am in log
+2018-06-15 18:54:54,112:ERROR:__main__:hello this application is running
+2018-06-15 18:54:56,114:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 18:56:17,766:DEBUG:__main__:hello ravi i am in log
+2018-06-15 18:56:17,766:ERROR:__main__:hello this application is running
+2018-06-15 18:56:19,739:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 18:59:52,674:DEBUG:__main__:hello ravi i am in log
+2018-06-15 18:59:52,674:ERROR:__main__:hello this application is running
+2018-06-15 18:59:54,959:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 19:01:52,174:DEBUG:__main__:hello ravi i am in log
+2018-06-15 19:01:52,174:ERROR:__main__:hello this application is running
+2018-06-15 19:01:54,151:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 19:05:46,306:DEBUG:__main__:hello ravi i am in log
+2018-06-15 19:05:46,306:ERROR:__main__:hello this application is running
+2018-06-15 19:06:02,318:DEBUG:__main__:hello ravi i am in log
+2018-06-15 19:06:02,318:ERROR:__main__:hello this application is running
+2018-06-15 19:06:35,293:DEBUG:__main__:hello ravi i am in log
+2018-06-15 19:06:35,293:ERROR:__main__:hello this application is running
+2018-06-15 19:08:30,118:DEBUG:__main__:hello ravi i am in log
+2018-06-15 19:08:30,118:ERROR:__main__:hello this application is running
+2018-06-15 19:08:32,539:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 19:10:06,137:DEBUG:__main__:hello ravi i am in log
+2018-06-15 19:10:06,137:ERROR:__main__:hello this application is running
+2018-06-15 19:10:08,440:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 19:10:53,407:DEBUG:__main__:hello ravi i am in log
+2018-06-15 19:10:53,407:ERROR:__main__:hello this application is running
+2018-06-15 19:10:55,424:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 19:11:33,602:DEBUG:__main__:hello ravi i am in log
+2018-06-15 19:11:33,602:ERROR:__main__:hello this application is running
+2018-06-15 19:11:35,621:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 19:12:04,424:DEBUG:__main__:hello ravi i am in log
+2018-06-15 19:12:04,424:ERROR:__main__:hello this application is running
+2018-06-15 19:12:06,407:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 19:12:37,871:DEBUG:__main__:hello ravi i am in log
+2018-06-15 19:12:37,871:ERROR:__main__:hello this application is running
+2018-06-15 19:12:39,868:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 19:13:55,270:DEBUG:__main__:hello ravi i am in log
+2018-06-15 19:13:55,270:ERROR:__main__:hello this application is running
+2018-06-15 19:13:57,250:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 19:14:50,815:DEBUG:__main__:hello ravi i am in log
+2018-06-15 19:14:50,815:ERROR:__main__:hello this application is running
+2018-06-15 19:14:52,831:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 19:17:46,049:DEBUG:__main__:hello ravi i am in log
+2018-06-15 19:17:46,049:ERROR:__main__:hello this application is running
+2018-06-15 19:17:48,392:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 19:21:53,546:DEBUG:__main__:hello ravi i am in log
+2018-06-15 19:21:53,546:ERROR:__main__:hello this application is running
+2018-06-15 19:21:55,599:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 19:24:51,292:DEBUG:__main__:hello ravi i am in log
+2018-06-15 19:24:51,292:ERROR:__main__:hello this application is running
+2018-06-15 19:24:53,598:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 19:26:16,674:DEBUG:__main__:hello ravi i am in log
+2018-06-15 19:26:16,674:ERROR:__main__:hello this application is running
+2018-06-15 19:26:18,664:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 19:28:22,959:DEBUG:__main__:hello ravi i am in log
+2018-06-15 19:28:22,959:ERROR:__main__:hello this application is running
+2018-06-15 19:28:24,973:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 19:28:53,993:DEBUG:__main__:hello ravi i am in log
+2018-06-15 19:28:53,993:ERROR:__main__:hello this application is running
+2018-06-15 19:28:55,974:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 19:31:10,016:DEBUG:__main__:hello ravi i am in log
+2018-06-15 19:31:10,016:ERROR:__main__:hello this application is running
+2018-06-15 19:31:12,336:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 19:33:51,759:DEBUG:__main__:hello ravi i am in log
+2018-06-15 19:33:51,759:ERROR:__main__:hello this application is running
+2018-06-15 19:33:54,061:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 19:36:09,444:DEBUG:__main__:hello ravi i am in log
+2018-06-15 19:36:09,444:ERROR:__main__:hello this application is running
+2018-06-15 19:36:11,710:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)
+2018-06-15 19:37:07,536:DEBUG:__main__:hello ravi i am in log
+2018-06-15 19:37:07,536:ERROR:__main__:hello this application is running
+2018-06-15 19:37:09,529:DEBUG:__main__:value of OPTIONS in init Namespace(DEBUG=False, config_file='.\\config_file.yaml', debug_log=None, default_password=None, default_user=None, icon_theme=None, proxy_server=None, start_url=None, window_size=None)

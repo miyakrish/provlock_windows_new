@@ -14,7 +14,8 @@ from testFormVer_BColor import Ui_MainWindow
 from accessCodeForm import Ui_Dialog
 import PySide
 from time import sleep
-import logging 
+import logging
+import os
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
@@ -155,10 +156,21 @@ DEFAULT_404 = """<h2>Sorry, can't go there</h2>
 <p>This page is not available on this computer.</p>
 <script>setTimeout('history.back()', 5000);</script>
 """
-DEFAULT_LOADING = """<h2>Please, Wait</h2>
-<p>This page is Loading on this Machine.</p>
-<script>setTimeout('history.back()', 5000);</script>
-"""
+DEFAULT_LOADING = '''<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>ProV</title>
+    </head>
+    <body style=" height: 100%;background-color: #F8F8F8;"><!--start body-->
+        <div class="container"><!--starcontainer-->
+            <img src="{}{}img{}logo.png"alt="logo" class="center" style="opacity: .3; height: 400px;display: block;margin-left: auto;margin-right: auto;margin-top: 1%;"/>
+            <h1 style="color: #DBDBDB;font-size: 80px;text-align: center;font-family: arial;">Provlock</h1>
+        </div><!--end container-->
+    </body><!--end body-->
+</html>
+    </body>
+''' . format(os.getcwd(), os.sep, os.sep)
 
 # This text will be shown when the start_url can't be loaded
 # Usually indicates lack of network connectivity.
@@ -339,12 +351,13 @@ class AccessCode(QDialog):
         self.uiAc = Ui_Dialog()
         self.uiAc.setupUi(self)
         self.options = options
-        self.setWindowTitle(" ")
+        self.setWindowTitle("ACCESS CODE")
         logger.debug("value of OPTIONS in init {}".format(options))
         self.setWindowFlags(self.windowFlags() & ~Qt.WindowContextHelpButtonHint)
         self.setWindowFlags(self.windowFlags() | QtCore.Qt.CustomizeWindowHint)
         self.setWindowFlags(self.windowFlags() & ~QtCore.Qt.WindowCloseButtonHint)
         self.setWindowFlags(self.windowFlags() | Qt.WindowStaysOnTopHint) #added by RSR
+        self.setWindowFlags(self.windowFlags() | Qt.FramelessWindowHint)
         self.uiAc.pushButtonSubmit.clicked.connect(self.submitAcode)
         self.uiAc.lineEdit.textChanged.connect(self.getAccessCode)           
         self.setModal(True)
@@ -355,8 +368,9 @@ class AccessCode(QDialog):
             print("I came in submit ENTER")            
 
     def moveEvent(self,event):
+        position = QtGui.QApplication.desktop().screen().rect().center() - self.rect().center()
         event.ignore()
-        self.move(550,220)
+        self.move(position)
         print ('i came in MoveEvent') 
         return True
         
@@ -682,7 +696,7 @@ class MainWindow(QMainWindow ):
         Show the question message
         """
         #cmsg.setStyleSheet("background-color: rgb(255, 255, 255);")
-        cmsg.setStyleSheet("background-color:#ffffff")        
+        # cmsg.setStyleSheet("background-color:#ffffff!important;")        
         flags = cmsg.StandardButton.Yes 
         flags |= cmsg.StandardButton.No
         question = "Do you really want to Quit Now?"

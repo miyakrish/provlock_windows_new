@@ -6,6 +6,7 @@
 #      by: pyside-uic 0.2.15 running on PySide 1.2.4
 #
 # WARNING! All changes made in this file will be lost!
+import os
 
 from PySide import QtCore, QtGui
 
@@ -16,7 +17,7 @@ class Ui_MainWindow(object):
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/icons/favicon.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
-        MainWindow.setStyleSheet("background-color: rgb(170, 0, 0);")        
+        MainWindow.setStyleSheet("background-color: #E6E6E6;")        
         self.centralwidget = QtGui.QWidget(MainWindow)
         self.centralwidget.setFocusPolicy(QtCore.Qt.StrongFocus)
         self.centralwidget.setStyleSheet("")
@@ -42,14 +43,18 @@ class Ui_MainWindow(object):
         font.setBold(False)
         self.bookMarkCombo.setFont(font)
         self.bookMarkCombo.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"font: 10pt \"MS Shell Dlg 2\";\n"
-"border-width: 2px;\n"
-"border-radius: 10px;\n"
-"\n"
-"min-width: 15em;\n"
-"padding: 10px;\n"
-"border-color: rgb(170, 0, 0);\n"
-"color: rgb(170, 0, 0);")
+            "font: 8pt \"MS Shell Dlg 2\";\n"
+            "border-width: 1px;\n"
+            "margin-left: 600px!important;\n"
+            "\n"
+            "position: absolute;\n"
+            "left: 100px;\n"
+            "float: right!important; \n"
+            "max-width: 400px!important;\n"
+            "padding: 3px;\n"
+            "height: 10px!important;\n"
+            "border-color: rgb(170, 0, 0);\n"
+            "color: #606060;")
         self.bookMarkCombo.setEditable(True)
         #self.bookMarkCombo.setCurrentText("")
         self.bookMarkCombo.setFrame(True)
@@ -69,13 +74,13 @@ class Ui_MainWindow(object):
         self.label_provImage.setLayoutDirection(QtCore.Qt.RightToLeft)
         self.label_provImage.setStyleSheet("")
         self.label_provImage.setText("")
-        self.label_provImage.setPixmap(QtGui.QPixmap(":/icons/ProvLogoMain.png"))
+        self.label_provImage.setPixmap(QtGui.QPixmap("/icons/ProvLogoMain.png"))
         self.label_provImage.show()
         self.label_provImage.setAlignment(QtCore.Qt.AlignCenter)
         self.label_provImage.setWordWrap(True)
         self.label_provImage.setObjectName("label_provImage")
         self.label_provImage.setScaledContents(True)
-        self.horizontalLayout.addWidget(self.label_provImage)
+        # self.horizontalLayout.addWidget(self.label_provImage)
         self.Quit = QtGui.QPushButton(self.centralwidget)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -88,20 +93,17 @@ class Ui_MainWindow(object):
         font.setBold(True)
         self.Quit.setFont(font)
         self.Quit.setStyleSheet("QPushButton#Quit {\n"
-"background-color: rgb(141, 141, 141);\n"
-"border-width: 2px;\n"
-"border-radius: 10px;\n"
-"border-color: #aa0000;\n"
-"min-width: 8em;\n"
-"padding: 4px;\n"
-"color: rgb(255, 255, 255);\n"
-"}\n"
-"QPushButton#Quit:pressed {\n"
-"    background-color: rgb(224, 0, 0);    \n"
-"    border-style: inset;\n"
-"}\n"
-"\n"
-"")
+            "background: transparent;\n"
+            "padding: 6px 2px!important;\n"
+            "max-width: 10px!important;\n"
+            "text-align: center;\n"
+            "display: inline-block;\n"
+            "}\n"
+            "QPushButton#Quit:pressed {\n"
+            "    border-style: inset;\n"
+            "}\n"
+            "\n"
+            "")
         self.Quit.setObjectName("Quit")
         self.horizontalLayout.addWidget(self.Quit)
         self.horizontalLayout.setStretch(0, 4)
@@ -111,22 +113,21 @@ class Ui_MainWindow(object):
         self.tabWidget = QtGui.QTabWidget(self.centralwidget)
         self.tabWidget.setAutoFillBackground(False)
         self.tabWidget.setStyleSheet("QTabWidget  QTabBar::tab{\n"
-"background-color: rgb(141, 141, 141);\n"
-"border-width: 2px;\n"
-"border-radius: 9px;\n"
-"border-color: #aa0000;\n"
-"min-width: 12em;\n"
-"padding: 4px;\n"
-"color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"QTabWidget  QTabBar::tab:selected{\n"
-"background-color: rgb(255, 255, 255);\n"
-"font: 10pt \"MS Shell Dlg 2\";\n"
-"color: rgb(170, 0, 0);\n"
-"}\n"
-"\n"
-"")
+            "background-color: rgb(141, 141, 141);\n"
+            "border-width: 2px;\n"
+            "border-color: #aa0000;\n"
+            "min-width: 12em;\n"
+            "padding: 4px;\n"
+            "color: rgb(255, 255, 255);\n"
+            "}\n"
+            "\n"
+            "QTabWidget  QTabBar::tab:selected{\n"
+            "background-color: rgb(255, 255, 255);\n"
+            "font: 10pt \"MS Shell Dlg 2\";\n"
+            "color: rgb(170, 0, 0);\n"
+            "}\n"
+            "\n"
+            "")
         self.tabWidget.setElideMode(QtCore.Qt.ElideMiddle)
         self.tabWidget.setObjectName("tabWidget")
         self.test_console = QtGui.QWidget()
@@ -163,6 +164,8 @@ class Ui_MainWindow(object):
         self.statusbar = QtGui.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
+        button_icon = QtGui.QPixmap(self.get_push_button_path())
+        self.Quit.setIcon(button_icon)
 
         self.retranslateUi(MainWindow)
         self.bookMarkCombo.setCurrentIndex(-1)
@@ -172,9 +175,10 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QtGui.QApplication.translate("MainWindow", "MainWindow", None, QtGui.QApplication.UnicodeUTF8))
-        self.Quit.setText(QtGui.QApplication.translate("MainWindow", "EXIT", None, QtGui.QApplication.UnicodeUTF8))
+        self.Quit.setText(QtGui.QApplication.translate("MainWindow", "", None, QtGui.QApplication.UnicodeUTF8))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.test_console), QtGui.QApplication.translate("MainWindow", "Test Console", None, QtGui.QApplication.UnicodeUTF8))
         self.lineEdit.setText(QtGui.QApplication.translate("MainWindow", "Look Here For Help", None, QtGui.QApplication.UnicodeUTF8))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.search_option), QtGui.QApplication.translate("MainWindow", "Search Option", None, QtGui.QApplication.UnicodeUTF8))
-
-import icons_rc
+    
+    def get_push_button_path(self):
+        return "{}{}img{}cross.png".format(os.getcwd(),os.sep, os.sep)
