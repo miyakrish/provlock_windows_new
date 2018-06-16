@@ -381,10 +381,8 @@ class AccessCode(QDialog):
         print("I came in submit access code")
         #pdb.set_trace()
         if AccessCode.accessCode == AccessCode.eL:
-            msg = QMessageBox()
-            msg.setIcon(QMessageBox.Warning)       
-            msg.setInformativeText("This is Warning Message!!!")
-            msg.setWindowTitle(" Access Code!!!")
+            msg = QMessageBox()      
+            msg.setWindowTitle("ACCESS CODE")
             msg.setWindowFlags(self.windowFlags() | Qt.WindowStaysOnTopHint) #
             msg.setStandardButtons(QMessageBox.Ok)            
             msg.setText("Please Enter Access Code")
@@ -426,10 +424,23 @@ class AccessCode(QDialog):
                 print("value of Access Code is {}".format(AccessCode.accessCode) )
                 self.setModal(True) 
                 msg = QMessageBox()
-                msg.setIcon(QMessageBox.Warning)       
-                msg.setWindowTitle(" Access Code!!!")
+                msg.setWindowTitle("ACCESS CODE")
                 msg.setWindowFlags(self.windowFlags() | Qt.WindowStaysOnTopHint)
-                msg.setStandardButtons(QMessageBox.Ok)            
+                msg.setStandardButtons(QMessageBox.Ok)
+                # msg.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+                #     "font: 8pt \"Roboto\";\n"
+                #     "border-width: 1px;\n"
+                #     # "margin-left: 600px!important;\n"
+                #     "\n"
+                #     "position: absolute;\n"
+                #     # "left: 100px;\n"
+                #     "float: right!important; \n"
+                #     "max-width: 300px!important;\n"
+                #     "padding: 1px;\n"
+                #     "height: 22px!important;\n"
+                #     "border-color: rgb(170, 0, 0);\n"
+                #     "color: #606060;")
+
                 error_message = jsonData['msg']
                 if AccessCode.acCount == 2:
                     error_message += (' ' + constants.MAXIMUM_ATTEMPT_REACHED)
@@ -699,8 +710,8 @@ class MainWindow(QMainWindow ):
         # cmsg.setStyleSheet("background-color:#ffffff!important;")        
         flags = cmsg.StandardButton.Yes 
         flags |= cmsg.StandardButton.No
-        question = "Do you really want to Quit Now?"
-        response = cmsg.question(self, "Question",question,flags)
+        question = "Do you really want to end test?"
+        response = cmsg.question(self, "Confirmation",question,flags)
         
         if response == cmsg.Yes:
             self.activityLog('closeMainWindowYES')
@@ -776,7 +787,7 @@ class MainWindow(QMainWindow ):
         self.setWindowFlags(self.windowFlags() | QtCore.Qt.CustomizeWindowHint)
 
         # disable (but not hide) close button
-        self.setWindowFlags(self.windowFlags() & ~QtCore.Qt.WindowCloseButtonHint)
+        # self.setWindowFlags(self.windowFlags() & ~QtCore.Qt.WindowCloseButtonHint)
         self.setWindowFlags(self.windowFlags() & ~Qt.WindowCancelButtonHint)
         #self.showFullScreen()
         #pdb.set_trace()
@@ -830,6 +841,8 @@ class MainWindow(QMainWindow ):
         #item=self.config.get("Restrictions")
         #print("value of item is: {}".format(item))
         #text = item[index+1]["url"]
+        self.uiMwin.tabWidget.setTabText(1,"HELP")
+        self.uiMwin.tabWidget.setCurrentIndex(1)
         self.uiMwin.lineEdit.setText(text)
         pass        
         #self.webSearch = QWebView() 
@@ -943,7 +956,7 @@ class MainWindow(QMainWindow ):
         self.stimer.start()
         
         self.uiMwin.lineEdit.textChanged.connect(self.line_edit_text_changed)
-        self.uiMwin.Quit.clicked.connect(self.close)
+        # self.uiMwin.Quit.clicked.connect(self.close)
         self.accessCode.uiAc.pushButtonSubmit.clicked.connect(self.loadBookMarksAndBrowser)
         self.accessCode.uiAc.pushButtonSubmit.clicked.connect(self.onLoadFinished)
         #self.uiAc.pushButtonSubmit.clicked.connect(self.callMainWindow)
@@ -1043,8 +1056,8 @@ class MainWindow(QMainWindow ):
             self.webTest.load(QUrl(urlTest))
             print("valuein loadFinished till page not load\n")
         
-        #urlTest="https://testconsole.provexam.com/#/pages/testconsole"
-        urlTest="http://tachetechnologies.com/provAdmin/#/login"
+        urlTest="https://testconsole.provexam.com/#/pages/testconsole"
+        #urlTest="http://tachetechnologies.com"
         self.webTest.load(QUrl(urlTest))
         print("loadFinished till page is loading\n")
         #self.setWindowFlags(self.windowFlags() | ~Qt.WindowStaysOnTopHint) #added by RSR 
