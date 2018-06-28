@@ -402,7 +402,6 @@ class AccessCode(QDialog):
                 #sys.exit(1)
                 print("========== printing bookmarks")
                 print(jsonData['Restrictions']['BOOKMARKS']) 
-                print(jsonData['Restrictions']['WEBSITE'])         
                 print("this is response of our code finish\n")            
                 configfile = {}
                 if self.options.config_file: 
