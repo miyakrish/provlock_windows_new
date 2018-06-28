@@ -323,14 +323,14 @@ class NumOfAppOpen(QMessageBox):
         pass  
         
     def process_exists(self):
-        listApp = ['chrome.exe','firefox.exe','Skype.exe', 'TeamViewer.exe']
+        listApp = ['chrome.exe','firefox.exe','Skype.exe', 'TeamViewer.exe', 'LyncMonitor.exe']
         for proc in psutil.process_iter():
             #print (proc.name())
             if proc.name() in listApp:
                 #pdb.set_trace()
                 msg = QMessageBox()
                 msg.setIcon(QMessageBox.Warning)       
-                msg.setInformativeText("Kindly Close The Application")
+                msg.setInformativeText("The Application will be closed forcefully")
                 msg.setWindowTitle("ERROR!!!")
                 msg.setWindowFlags(self.windowFlags() | Qt.WindowStaysOnTopHint) #added by RSR
                 #msg.setDetailedText("The details are as follows:")
@@ -338,7 +338,11 @@ class NumOfAppOpen(QMessageBox):
                 msg.setText("Looks like  application {} is Open".format(proc.name().upper()))
                 msg.show()
                 msg.exec_()
-                sys.exit(1)
+                try:
+                    proc.terminate()
+                except:
+                    pass
+                #sys.exit(1)
     
 class AccessCode(QDialog):
     # Temporary
@@ -878,12 +882,12 @@ class MainWindow(QMainWindow ):
             return True       
     
     def process_exists(self):
-        listApp = ['chrome.exe','firefox.exe','Skype.exe', 'TeamViewer.exe']
+        listApp = ['chrome.exe','firefox.exe','Skype.exe', 'TeamViewer.exe', 'LyncMonitor.exe']
         for proc in psutil.process_iter():
             if proc.name() in listApp:
                 msg = QMessageBox()
                 msg.setIcon(QMessageBox.Warning)       
-                msg.setInformativeText("Kindly Close The Application")
+                msg.setInformativeText("The Application will be closed forcefully")
                 msg.setWindowTitle("ERROR!!!")
                 msg.setWindowFlags(self.windowFlags() | Qt.WindowStaysOnTopHint) #added by RSR
                 #msg.setDetailedText("The details are as follows:")
