@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['testForm.py'],
-             pathex=['C:\\Users\\sreerakr\\Desktop\\provLock_Py_2.7\\provLock_Py_2.7'],
+             pathex=['C:\\Users\\super\\Desktop\\PROV_WINDOWS\\provlock_windows_new'],
              binaries=[],
              datas=[],
              hiddenimports=[],
@@ -18,12 +18,16 @@ pyz = PYZ(a.pure, a.zipped_data,
              cipher=block_cipher)
 exe = EXE(pyz,
           a.scripts,
-          a.binaries,
-          a.zipfiles,
-          a.datas,
+          exclude_binaries=True,
           name='testForm',
           debug=False,
           strip=False,
           upx=True,
-          runtime_tmpdir=None,
-          console=True )
+          console=False )
+coll = COLLECT(exe,
+               a.binaries,
+               a.zipfiles,
+               a.datas,
+               strip=False,
+               upx=True,
+               name='testForm')

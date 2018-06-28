@@ -1,0 +1,95 @@
+missing module named 'win32com.gen_py' - imported by win32com, c:\python27\lib\site-packages\PyInstaller\loader\rthooks\pyi_rth_win32comgenpy.py
+missing module named org - imported by copy
+missing module named pwd - imported by posixpath, shutil, tarfile, getpass, distutils.util, psutil, netrc
+missing module named fcntl - imported by tempfile, subprocess
+missing module named _sysconfigdata - imported by distutils.sysconfig, sysconfig
+missing module named grp - imported by shutil, tarfile
+missing module named pyimod03_importers - imported by c:\python27\lib\site-packages\PyInstaller\loader\rthooks\pyi_rth_pkgres.py
+missing module named 'pkg_resources.extern.pyparsing' - imported by pkg_resources._vendor.packaging.requirements, pkg_resources._vendor.packaging.markers
+missing module named ordereddict - imported by pkg_resources._vendor.pyparsing
+missing module named _thread.RLock - imported by _thread, pkg_resources._vendor.pyparsing
+missing module named _thread.get_ident - imported by _thread, future.backports.misc
+missing module named 'com.sun' - imported by pkg_resources._vendor.appdirs
+missing module named com - imported by pkg_resources._vendor.appdirs
+missing module named pkg_resources.extern.packaging - imported by pkg_resources.extern, pkg_resources
+missing module named pkg_resources.extern.appdirs - imported by pkg_resources.extern, pkg_resources
+missing module named 'importlib.machinery' - imported by pkg_resources
+missing module named 'pkg_resources.extern.six.moves' - imported by pkg_resources, pkg_resources._vendor.packaging.requirements
+missing module named pkg_resources.extern.six - imported by pkg_resources.extern, pkg_resources
+missing module named _imp - imported by pkg_resources
+missing module named _scproxy - imported by urllib, future.backports.urllib.request
+missing module named EasyDialogs - imported by getpass
+missing module named termios - imported by getpass
+missing module named SOCKS - imported by ftplib
+missing module named rourl2path - imported by urllib
+missing module named 'org.python' - imported by pickle, xml.sax
+missing module named 'java.lang' - imported by platform, xml.sax._exceptions
+missing module named _xmlplus - imported by xml
+missing module named 'Carbon.File' - imported by plistlib
+missing module named 'Carbon.Files' - imported by plistlib
+missing module named Carbon - imported by plistlib
+missing module named 'multiprocessing.popen_fork' - imported by c:\python27\lib\site-packages\PyInstaller\loader\rthooks\pyi_rth_multiprocessing.py
+missing module named 'multiprocessing.popen_spawn_win32' - imported by c:\python27\lib\site-packages\PyInstaller\loader\rthooks\pyi_rth_multiprocessing.py
+missing module named 'multiprocessing.spawn' - imported by c:\python27\lib\site-packages\PyInstaller\loader\rthooks\pyi_rth_multiprocessing.py
+missing module named 'dbm.ndbm' - imported by future.moves.dbm.ndbm
+missing module named gdbm - imported by anydbm, future.moves.dbm.gnu
+missing module named 'dbm.gnu' - imported by future.moves.dbm.gnu
+missing module named 'dbm.dumb' - imported by future.moves.dbm.dumb
+missing module named bsddb3 - imported by bsddb
+missing module named _pybsddb - imported by bsddb, bsddb.db
+missing module named dbm - imported by future.standard_library, future.moves.dbm, whichdb, anydbm, future.moves.dbm.ndbm
+missing module named resource - imported by posix, test.support
+missing module named _dummy_threading - imported by dummy_threading
+missing module named winreg.HKEY_LOCAL_MACHINE - imported by winreg, platform
+missing module named winreg.CloseKey - imported by winreg, platform
+missing module named winreg.QueryValueEx - imported by winreg, platform
+missing module named winreg.OpenKeyEx - imported by winreg, platform
+missing module named _datetime - imported by future.backports.datetime
+missing module named reprlib.recursive_repr - imported by reprlib, future.backports.misc
+runtime module named urllib3.packages.six.moves - imported by httplib, urllib3.connectionpool, urllib3.util.response, 'urllib3.packages.six.moves.urllib', urllib3.response
+missing module named ipaddress - imported by urllib3.packages.ssl_match_hostname._implementation
+missing module named backports - imported by urllib3.packages.ssl_match_hostname
+missing module named "'urllib3.packages.six.moves.urllib'.parse" - imported by urllib3.request, urllib3.poolmanager
+missing module named _xmlrpclib - imported by xmlrpclib
+missing module named 'urllib.request' - imported by requests.compat
+missing module named 'urllib.parse' - imported by requests.compat
+missing module named simplejson - imported by requests.compat
+missing module named socks - imported by urllib3.contrib.socks
+missing module named 'OpenSSL.crypto' - imported by urllib3.contrib.pyopenssl
+missing module named 'cryptography.x509' - imported by urllib3.contrib.pyopenssl
+missing module named 'cryptography.hazmat' - imported by urllib3.contrib.pyopenssl
+missing module named cryptography - imported by urllib3.contrib.pyopenssl
+missing module named OpenSSL - imported by urllib3.contrib.pyopenssl
+missing module named psutil._psutil_aix - imported by psutil, psutil._psaix
+missing module named psutil._psutil_sunos - imported by psutil, psutil._pssunos
+missing module named ElementC14N - imported by xml.etree.ElementTree
+missing module named psutil._psutil_bsd - imported by psutil, psutil._psbsd
+missing module named psutil._psutil_osx - imported by psutil, psutil._psosx
+missing module named enum - imported by psutil._common, psutil._pslinux, psutil._pswindows
+missing module named _psutil_linux - imported by psutil
+missing module named psutil._psutil_posix - imported by psutil, psutil._pslinux, psutil._psosx, psutil._psbsd, psutil._pssunos, psutil._psaix
+missing module named _yaml - imported by yaml.cyaml
+missing module named vms_lib - imported by platform
+missing module named java - imported by platform
+missing module named MacOS - imported by platform
+missing module named macresource - imported by MacOS
+missing module named gestalt - imported by platform
+missing module named 'collections.abc' - imported by pytz.lazy
+missing module named 'PyQt4.QtNetwork' - imported by C:\Users\super\Desktop\PROV_WINDOWS\provlock_windows_new\testForm.py
+missing module named 'PyQt4.QtWebKit' - imported by C:\Users\super\Desktop\PROV_WINDOWS\provlock_windows_new\testForm.py
+missing module named 'PyQt4.QtCore' - imported by C:\Users\super\Desktop\PROV_WINDOWS\provlock_windows_new\testForm.py, c:\python27\lib\site-packages\PyInstaller\loader\rthooks\pyi_rth_qt4plugins.py
+missing module named PyQt4 - imported by C:\Users\super\Desktop\PROV_WINDOWS\provlock_windows_new\testForm.py
+missing module named 'PyQt5.QtNetwork' - imported by C:\Users\super\Desktop\PROV_WINDOWS\provlock_windows_new\testForm.py
+missing module named 'PyQt5.QtWebEngineWidgets' - imported by C:\Users\super\Desktop\PROV_WINDOWS\provlock_windows_new\testForm.py
+missing module named 'PyQt5.QtPrintSupport' - imported by C:\Users\super\Desktop\PROV_WINDOWS\provlock_windows_new\testForm.py
+missing module named 'PyQt5.QtWidgets' - imported by C:\Users\super\Desktop\PROV_WINDOWS\provlock_windows_new\testForm.py
+missing module named PyQt5 - imported by C:\Users\super\Desktop\PROV_WINDOWS\provlock_windows_new\testForm.py
+missing module named PyQt - imported by C:\Users\super\Desktop\PROV_WINDOWS\provlock_windows_new\testForm.py
+missing module named riscosenviron - imported by os
+missing module named riscospath - imported by os
+missing module named riscos - imported by os
+missing module named ce - imported by os
+missing module named _emx_link - imported by os
+missing module named os2 - imported by os
+missing module named posix - imported by os
+missing module named readline - imported by cmd, pdb

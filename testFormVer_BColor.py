@@ -12,6 +12,8 @@ from PySide import QtCore, QtGui
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
+        print("==================================CALLING UI MAINWINDOW")
+        print("\n")
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1173, 558)
         icon = QtGui.QIcon()
@@ -89,6 +91,7 @@ class Ui_MainWindow(object):
             # "left: 100px;\n"
             "float: right!important; \n"
             "max-width: 300px!important;\n"
+            "min-width: 300px!important;\n"
             "padding: 1px;\n"
             "height: 22px!important;\n"
             "border-color: rgb(170, 0, 0);\n"
@@ -97,6 +100,74 @@ class Ui_MainWindow(object):
         #self.bookMarkCombo.setCurrentText("")
         self.bookMarkCombo.setFrame(True)
         self.bookMarkCombo.setObjectName("bookMarkCombo")
+
+        width=20
+        self.backbutton=QtGui.QPushButton("");
+        rMyIcon = QtGui.QPixmap("back_d.png");
+        rMyIcon.setMaximumWidtht=50
+        self.backbutton.setIcon(QtGui.QIcon(rMyIcon))
+        self.backbutton.setIconSize(QtCore.QSize(20,20))
+        self.backbutton.setObjectName("backBtn")
+        self.backbutton.setMaximumWidth(width)
+        self.backbutton.setStyleSheet(
+            # "margin-left: 600px!important;\n"
+            "\n"
+            "border:none;\n"
+            "position: absolute;\n"
+            
+            # "left: 100px;\n"
+
+            "float: right!important; \n"
+            "max-width: 30px!important;\n"
+            "min-width: 30px!important;\n"
+            "padding: 1px;\n"
+            "height: 28px!important;\n"
+            "color: #606060;")
+        
+
+        self.horizontalLayout.addWidget(self.backbutton)
+
+
+        self.fwbutton=QtGui.QPushButton("");
+        self.fwbutton.isFlat=True
+        rMyIcon = QtGui.QPixmap("forward_d.png");
+        self.fwbutton.setIcon(QtGui.QIcon(rMyIcon))
+        self.fwbutton.setIconSize(QtCore.QSize(20,20))
+        self.fwbutton.setObjectName("fwBtn")
+        self.fwbutton.setMaximumWidth(width)
+        self.fwbutton.setStyleSheet(
+            # "margin-left: 600px!important;\n"
+            "\n"
+            "border:none;\n"
+            "margin-right:15px;\n"
+            "position: absolute;\n"
+            # "left: 100px;\n"
+            "float: right!important; \n"
+            "max-width: 20px!important;\n"
+            "min-width: 20px!important;\n"
+            "padding: 1px;\n"
+            "height: 22px!important;\n"
+            )
+        self.horizontalLayout.addWidget(self.fwbutton)
+        
+        self.status_txt1 = QtGui.QLabel()
+        movie = QtGui.QMovie("loading.gif")
+        self.status_txt1.setMovie(movie)
+        movie.start()
+        self.status_txt1.setLayout(QtGui.QHBoxLayout())
+        self.status_txt1.setStyleSheet(
+            "border:none;\n"
+            "margin-right:0px;\n"
+            "position: absolute;\n"
+            # "left: 100px;\n"
+            "float: right!important; \n"
+            "max-width: 100px!important;\n"
+            "min-width: 100px!important;\n"
+            "padding: 1px;\n"
+            "height: 22px!important;\n"
+        )
+        self.horizontalLayout.addWidget(self.status_txt1)
+        
         self.horizontalLayout.addWidget( self.bookMarkCombo)
         # self.label_provImage = QtGui.QLabel(self.centralwidget)
         self.label_provImage = QtGui.QLabel(self.centralwidget)

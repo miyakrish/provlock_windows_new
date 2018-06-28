@@ -11,9 +11,17 @@ from PySide import QtCore, QtGui
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
+        print("\n")
+        print("=======================================UI MAKER IS HERE")
+        return
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(666, 596)
         self.centralwidget = QtGui.QWidget(MainWindow)
+
+        toolBar = MainWindow.addToolBar("Navigation")
+        toolBar.addAction(MainWindow.webTest.pageAction(QWebPage.Back))
+
+
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout = QtGui.QVBoxLayout(self.centralwidget)
         self.verticalLayout.setObjectName("verticalLayout")
@@ -29,6 +37,7 @@ class Ui_MainWindow(object):
         #self.bookMarkCombo.setCurrentText("BookMarks")
         self.bookMarkCombo.setObjectName("bookMarkCombo")
         self.horizontalLayout.addWidget(self.bookMarkCombo)
+
         self.bookMark_label = QtGui.QLabel(self.centralwidget)
         self.bookMark_label.setObjectName("bookMark_label")
         self.horizontalLayout.addWidget(self.bookMark_label)
@@ -50,6 +59,7 @@ class Ui_MainWindow(object):
         self.test_console = QtGui.QWidget()
         self.test_console.setObjectName("test_console")
         self.tabWidget.addTab(self.test_console, "")
+
         self.search_option = QtGui.QWidget()
         self.search_option.setObjectName("search_option")
         self.lineEdit = QtGui.QLineEdit(self.search_option)

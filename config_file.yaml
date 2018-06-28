@@ -1,19 +1,22 @@
 Restrictions:
-  application:
+  APPLICATION:
   - {id: '9', value: Notepad}
-  bookmarks:
+  BOOKMARKS:
   - {id: '7', value: 'https://www.tutorialspoint.com/'}
   - {id: '8', value: 'https://www.javatpoint.com/'}
-  control:
-  - {id: '5', value: Ctrl+C}
-  - {id: '6', value: Alt}
-  port:
+  - {id: '12', value: 'http://www.tachetechnologies.com'}
+  - {id: '32', value: 'http://tachetechnologies.com/provAdmin/'}
+  - {id: '33', value: 'https://www.facebook.com/'}
+  - {id: '39', value: 'https://testconsole.provexam.com/#/pages/testconsole'}
+  CONTROL: [null, null]
+  PORT:
   - {id: '3', value: USB}
   - {id: '4', value: HDMI}
-  website:
+  WEBSITE:
   - {id: '1', value: www.facebook.com}
   - {id: '2', value: www.provnow.com}
-access_id: 610
+access_id: 851
 rule_id: '1'
 rule_name: basic
 status: success
+test_url: http://www.tachetechnologies.com

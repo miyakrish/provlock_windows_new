@@ -36,8 +36,7 @@ logger.addHandler(appNum_handler)
 #import PySide
 # QT Binding imports
 #log.basicConfig(filename='provLock.log',level=log.DEBUG,format = "%(levelname)s:%(asctime)s:%(message)s")
-logger.debug("hello ravi i am in log")
-logger.error("hello this application is running")
+
 
 while True:
     # This is a little odd, but seemed cleaner than
@@ -47,29 +46,22 @@ while True:
         print("Hello 1")
         #from PyQt5.QtGui import QIcon, QKeySequence
         from PyQt.QtGui import QIcon, QKeySequence
-        print("Hello 2")
         from PyQt5.QtCore import (
             QUrl, QTimer, QObject, QT_VERSION_STR, QEvent,
             Qt, QTemporaryFile, QDir, QCoreApplication, qVersion, pyqtSignal,
             QSizeF
         )
-        print("Hello 3")     
         
         from PyQt5.QtWidgets import (
             QMainWindow, QAction, QWidget, QApplication, QSizePolicy,
             QToolBar, QDialog, QMenu
         )
-        print("Hello 4")
         #from PyQt5.QtWebKit import QWebSettings
-        print("Hello 5")
         from PyQt5.QtPrintSupport import QPrinter, QPrintDialog
-        print("Hello 6")
         #from PyQt5.QtWebKitWidgets import QWebView, QWebPage
         from PyQt5.QtWebEngineWidgets import QWebEngineSettings, QWebEngineView, QWebEnginePage
-        print("Hello 7")
         from PyQt5.QtNetwork import (QNetworkRequest, QNetworkAccessManager,
                                      QNetworkProxy)
-        print("Hello 8")
         break
     except ImportError as e:
         print("Qt5 import error")
@@ -95,7 +87,6 @@ while True:
         pass
     try:
         """If not PyQT, try PySide"""
-        print("Hello 9")
         from PySide.QtGui import (
             QMainWindow, QAction, QIcon, QWidget,
             QApplication, QSizePolicy, QKeySequence, QToolBar, QPrinter,
@@ -136,7 +127,7 @@ import subprocess
 import datetime
 import site
 import time as Time
-
+import socket
 from PySide import QtCore, QtGui, QtUiTools
 from PySide import QtUiTools
 from functools import partial
@@ -289,7 +280,8 @@ CONFIG_OPTIONS = {
     "Restrictions":           {"default": {},  "type": dict},    
     "rule_id":                {"default": None,  "type": str},
     "rule_name":              {"default": None,  "type": str},
-    "access_id":              {"default": 0,  "type": int}
+    "access_id":              {"default": 0,  "type": int},
+    "test_url":              {"default": "https://google.com", "type": str}
 }
 # insertAccessActivity {"access_log_id":21,"activity":"window"}
 config = {}
@@ -323,6 +315,9 @@ class NumOfAppOpen(QMessageBox):
         pass  
         
     def process_exists(self):
+        return
+        #listApp = ['firefox.exe', 'TeamViewer.exe']
+
         listApp = ['chrome.exe','firefox.exe','Skype.exe', 'TeamViewer.exe']
         for proc in psutil.process_iter():
             #print (proc.name())
@@ -398,18 +393,20 @@ class AccessCode(QDialog):
             response = requests.post(VIEW_RULE_URL, data=json.dumps(para))
             print("this is the value of response {}\n".format(response))
             jsonData=response.json()
-            print("jasonData is {}".format(jsonData))
+            print("jsonData is {}".format(jsonData))
             print("status is {}".format(jsonData['status']))
             if jsonData['status'] == 'success':
                 # Set that the data has been retrieved successfully.
                 print(jsonData)  
                 print(jsonData['Restrictions']) 
-                print(jsonData['Restrictions']['bookmarks'])  
-                print(jsonData['Restrictions']['website'])         
+                #sys.exit(1)
+                print("========== printing bookmarks")
+                print(jsonData['Restrictions']['BOOKMARKS']) 
+                print(jsonData['Restrictions']['WEBSITE'])         
                 print("this is response of our code finish\n")            
                 configfile = {}
                 if self.options.config_file: 
-                    print("Ravi loading configuration from 22")
+                    print("loading configuration from 22")
                     self.file = open("config_file.yaml", 'w')
                     self.file.seek(0,2)
                     yaml.safe_dump(jsonData, self.file)
@@ -422,11 +419,26 @@ class AccessCode(QDialog):
                     self.hide()
             elif jsonData['status'] == 'failed':
                 print("value of Access Code is {}".format(AccessCode.accessCode) )
-                self.setModal(True) 
+                self.setModal(True)
+
                 msg = QMessageBox()
+                msg.setIcon(QMessageBox.Critical)       
+        
+                flags = QMessageBox.Ok 
+                question = "ACCESS CODE"
+                response = cmsg.question(self, "Confirmation",question,flags)
+        
+                if response == QMessageBox.Ok:
+                    event.accept() 
+                #app.quit()
+                #return False
+                """
+
+                msg = QMessageBox()
+                msg.setIcon(QMessageBox.Critical)       
                 msg.setWindowTitle("ACCESS CODE")
                 msg.setWindowFlags(self.windowFlags() | Qt.WindowStaysOnTopHint)
-                msg.setStandardButtons(QMessageBox.Ok)
+                msg.setStandardButtons(QMessageBox.Ok)"""
                 # msg.setStyleSheet("background-color: rgb(255, 255, 255);\n"
                 #     "font: 8pt \"Roboto\";\n"
                 #     "border-width: 1px;\n"
@@ -552,22 +564,21 @@ class MainWindow(QMainWindow ):
                 msg.close()               
                 #self.close()
                 app.quit()
-                
                 #pass
             else:                
                 msg.exec_()
                 pass          
             
-            # = QMessageBox(self,"Escaped Pressed","Hello Ravi want to leave",QMessageBox.Yes | QMessageBox.No)
-            #print("Hello Ravi Escape is PRESSED")
+            # = QMessageBox(self,"Escaped Pressed","Hello , want to leave",QMessageBox.Yes | QMessageBox.No)
+            #print("Hello  Escape is PRESSED")
             #self.close()
             
         elif e.key()+1 == Qt.Key_Enter:
             self.activityLog('Enter')
-            print("Hello Ravi Enter is PRESSED")      
+            print("Hello , Enter is PRESSED")      
                
         elif e.key() == Qt.Key_D:
-            print("Hello Ravi TAB is PRESSED")
+            print("Hello , TAB is PRESSED")
         elif e.modifiers() & Qt.ShiftModifier and e.modifiers() & Qt.ControlModifier:
             self.activityLog('Ctrl+Shift')
             print ('Ctrl+Shift was pressed')
@@ -613,7 +624,7 @@ class MainWindow(QMainWindow ):
         '''
         if event.type() == QEvent.KeyPress and (event.key() == Qt.Key_Tab):# or event.modifiers() == Qt.AltModifier):
             self.activityLog('Tab')
-            print("Hello Ravi Alt+Tab is PRESSED")
+            print("Hello , Alt+Tab is PRESSED")
             #self.focusWidget()
             self.activateWindow()
             return True # eat alt+tab or alt+shift+tab key            
@@ -621,7 +632,7 @@ class MainWindow(QMainWindow ):
                
         elif (event.type() == QEvent.KeyPress and event.key()== Qt.Key_Meta):
             self.activityLog('Meta or Window')
-            print("Hello Ravi window is PRESSED")
+            print("Hello  window is PRESSED")
             msg = QMessageBox()
             msg.setIcon(QMessageBox.Warning)
        
@@ -635,11 +646,11 @@ class MainWindow(QMainWindow ):
             
             msg.exec_()                        
             return True
-            #print("Hello Ravi window is PRESSED")
+            #print("Hello , window is PRESSED")
             #event.accept()
         elif (event.type() == QEvent.KeyPress and event.key()== Qt.Key_Bluetooth):
             self.activityLog('Bluetooth')
-            print("Hello Ravi dont PRESSED Screen Saver")            
+            print("Hello  dont PRESSED Screen Saver")            
             return True        
         elif event.type()== QEvent.KeyPress and (event.matches(QKeySequence.Print)):
             self.activityLog('PrinterKey')
@@ -682,7 +693,7 @@ class MainWindow(QMainWindow ):
         '''    
         elif QKeySequence(e.key()+int(e.modifiers())) == QKeySequence("Ctrl+C"):
             #self.actionCopy.trigger()
-            print("Hello Ravi window GGGGTTGT PRESSED")
+            print("Hello  window GGGGTTGT PRESSED")
             pass'''
     
     
@@ -699,7 +710,10 @@ class MainWindow(QMainWindow ):
     '''    
         
     def closeEvent(self,event):
-        self.activityLog('closeMainWindow')
+        try:
+            self.activityLog('closeMainWindow')
+        except:
+            print("INTERNET NOT PRESENT")
         cmsg = QMessageBox()
         cmsg.setIcon(QMessageBox.Critical)       
         
@@ -765,7 +779,7 @@ class MainWindow(QMainWindow ):
         super(MainWindow, self).__init__(parent)
         # Load config file
         #pdb.set_trace()
-        print("Ravi loading configuration from '{}'".format(options))
+        print(" loading configuration from '{}'".format(options))
         '''
         loader = QtUiTools.QUiLoader()
         uifile = QtCore.QFile("testForm.ui")
@@ -790,7 +804,7 @@ class MainWindow(QMainWindow ):
         # self.setWindowFlags(self.windowFlags() & ~QtCore.Qt.WindowCloseButtonHint)
         self.setWindowFlags(self.windowFlags() & ~Qt.WindowCancelButtonHint)
         #self.showFullScreen()
-        #pdb.set_trace()
+        #pd.set_trace()
         #self.resize(300,300)
         
         app.aboutToQuit.connect(self.closeEvent)
@@ -832,7 +846,7 @@ class MainWindow(QMainWindow ):
                 '''
             ''' 
             if eL.key()+1 == Qt.Key_Enter:
-                print("Hello Ravi Enter is PRESSED in linedit")      
+                print("Hello  Enter is PRESSED in linedit")      
             '''
             
     def setLineEditText(self,index):
@@ -915,8 +929,44 @@ class MainWindow(QMainWindow ):
             msg.show()
             msg.exec_()
             return True
-        
-                            
+    import subprocess
+    
+    def check_inter(self):
+        try:
+            """code=subprocess.call(["ping","-n","1","google.com"])
+            if code==0:
+                self.msg_net.done(1)
+                print("=========================================Internet is  there")
+            else:
+                print("CODE IS -------------------- ")
+                print(code)
+                self.msg_net = QMessageBox()
+                self.msg_net.setIcon(QMessageBox.Warning)       
+                self.msg_net.setInformativeText("No Internet")
+                self.msg_net.setWindowTitle("ERROR!!!")
+                self.msg_net.setWindowFlags(self.windowFlags() | Qt.WindowStaysOnTopHint) #added by RSR
+                #msg.setDetailedText("The details are as follows:")
+                self.msg_net.setStandardButtons(QMessageBox.Ok)            
+                self.msg_net.setText("Ther is no internet conncection ")
+                self.msg_net.show()
+                self.msg_net.exec_()
+                print("No Internet==========================================")
+            """
+            a=socket.create_connection(("google.com",80))
+            self.msg_net.done(1)
+        except Exception as e:
+            print("No Internet")
+            self.msg_net = QMessageBox()
+            self.msg_net.setIcon(QMessageBox.Warning)       
+            self.msg_net.setInformativeText("No Internet")
+            self.msg_net.setWindowTitle("ERROR!!!")
+            self.msg_net.setWindowFlags(self.windowFlags() | Qt.WindowStaysOnTopHint) #added by RSR
+            #msg.setDetailedText("The details are as follows:")
+            self.msg_net.setStandardButtons(QMessageBox.Ok)            
+            self.msg_net.setText("Ther is no internet conncection ")
+            self.msg_net.show()
+            self.msg_net.exec_()
+            print(e)
     def build_ui(self,options):
         """Set up the user interface for the main window.
 
@@ -949,7 +999,15 @@ class MainWindow(QMainWindow ):
         self.apptimer.setInterval(20000)
         self.apptimer.timeout.connect(self.process_exists)
         self.apptimer.start()
+
+
         
+        self.stimer1 = QTimer()
+        self.stimer1.setInterval(4000)
+        self.stimer1.timeout.connect(self.check_inter)
+        self.stimer1.start()
+
+
         self.stimer = QTimer()
         self.stimer.setInterval(5000)
         self.stimer.timeout.connect(self.check_external_storage)
@@ -962,8 +1020,8 @@ class MainWindow(QMainWindow ):
         #self.uiAc.pushButtonSubmit.clicked.connect(self.callMainWindow)
         #self.accessCode.close()
         #self.tabWidget.clicked.connect(self.openTab)
-        #myuiform.Ui_MainWindow.lineEdit.setText("hello ravi how r u?")
-        self.uiMwin.lineEdit.setText("hello ravi how r u?")
+        #myuiform.Ui_MainWindow.lineEdit.setText("hello  how r u?")
+        self.uiMwin.lineEdit.setText("hello  how r u?")
         '''
         self.bookMarkCobo.addItem("cat")
         self.bookMarkCobo.addItem("Bat")
@@ -981,13 +1039,17 @@ class MainWindow(QMainWindow ):
                              'screensaver': self.screensaver}
         self.screensaver_active = False
         '''
-        self.webTest = QWebView() 
+        print("===============================================WEBVIEW CONFIG")
+        print(options,"options")
+        self.webTest = CusTomWebview(CONFIG_OPTIONS,self.uiMwin,False)
+                
+
+        #self.webTest.loadFinished.connect(self.webTest.onLoadFinished) 
         #self.webTest.connect(self.webTest, SIGNAL('loadFinished(bool)'), self.loadFinished)
         #self.webTest.loadFinished.connect(self.loadFinished)
-        self.webTest.setHtml(DEFAULT_LOADING)
+        #self.webTest.setHtml(DEFAULT_LOADING)
                
-        self.webSearch = QWebView()  
-        
+        self.webSearch = CusTomWebview(CONFIG_OPTIONS,self.uiMwin,True)
         #urlSearch="http://google.com" 
     
         #self.webSearch.load(QUrl(urlSearch))
@@ -1007,12 +1069,33 @@ class MainWindow(QMainWindow ):
         #self.fBoxSearch.addRow(self.webSearch)
         self.uiMwin.search_option.setLayout(self.uiMwin.formLayout)  
         self.uiMwin.test_console.setLayout(self.vBoxTest)
-        
+
         
         self.setWindowFlags(self.windowFlags() | Qt.WindowStaysOnTopHint) #added by RSR
         self.activateWindow()
         # create a hook manager
         
+
+
+
+        def goback():
+            try:
+                print("Going back from new one====")
+                print(QWebPage.Back)
+                self.webSearch.bac(self.uiMwin.backbutton)
+                self.webTest.bac(self.uiMwin.backbutton)
+                print("\n\n\n\n")
+            except Exception as e:
+                print(e)
+                print("EROROROROROROROROO==============================")
+        
+        def gofw():
+            print("Going Forward")
+            self.webSearch.fww(self.uiMwin.fwbutton)
+            print("\n\n\n\n")
+        self.uiMwin.backbutton.clicked.connect(goback)
+        self.uiMwin.fwbutton.clicked.connect(gofw)
+
         
         hm = pyHook.HookManager()
         print ('hm is:{}'.format(hm))
@@ -1031,15 +1114,14 @@ class MainWindow(QMainWindow ):
         # ##END OF UI SETUP###    
     def loadBookMarksAndBrowser(self):
         pass
+        
         #print("value of config Dict is {}".format(config))
         for value in config.get("Restrictions").items():
             #pdb.set_trace()
             print("value of value {}\n".format(value))
             #print("value of BookMark_Combo {}\n".format(item['bookmarks']))
             
-            if 'bookmarks' in value:
-                print("here it is")                
-                print("value of value[1]is {}".format(value[1]) )                  
+            if 'BOOKMARKS' in value:
                 for txt in range(0,len(value[1])):
                     self.uiMwin.bookMarkCombo.addItem(value[1][txt]['value'])
                     self.default=value[1][txt]['value']                   
@@ -1051,14 +1133,17 @@ class MainWindow(QMainWindow ):
                 
     def onLoadFinished(self): 
         print("valuein loadFinished till page not load\n")       
-        if config.get("start_url"):
-            urlTest= config.get("start_url")
+        if config.get("test_url"):
+            urlTest= config.get("test_url")
             self.webTest.load(QUrl(urlTest))
             print("valuein loadFinished till page not load\n")
-        
-        urlTest="https://testconsole.provexam.com/#/pages/testconsole"
+        import pprint
+
+        print("TEST URL IS NOW",urlTest)
+        #urlTest="https://testconsole.provexam.com/#/pages/testconsole"
         #urlTest="http://tachetechnologies.com"
         self.webTest.load(QUrl(urlTest))
+
         print("loadFinished till page is loading\n")
         #self.setWindowFlags(self.windowFlags() | ~Qt.WindowStaysOnTopHint) #added by RSR 
         #self.setWindowFlags(~Qt.WindowStaysOnTopHint)   
@@ -1245,50 +1330,90 @@ class WcgNetworkAccessManager(QNetworkAccessManager):
         return super(WcgNetworkAccessManager, self).createRequest(op, request, iodata)
 
 
-class WcgWebView(QWebView):
+class CusTomWebview(QWebView):
     """This is the webview for the application.
 
     It represents a browser window, either the main one or a popup.
     It's a simple wrapper around QWebView that configures some basic settings.
     """
-    def __init__(self, config, parent=None, **kwargs):
+    def bac(self,backbutton):
+        print("=============================================BACK CLASSS")
+        print(self.page().history())
+        print(self.page().history().canGoBack())
+        print(self.page().history().count())
+
+
+        if self.page().history().canGoBack():
+            print("CAN GO BACK AND GOIND")
+            self.page().history().back()
+        else:
+            rMyIcon = QtGui.QPixmap("back_d.png");
+            rMyIcon.setMaximumWidtht=50
+            backbutton.setIcon(QtGui.QIcon(rMyIcon))
+            backbutton.setIconSize(QtCore.QSize(20,20))
+            print("CANNOT GO BACK ")
+        print("===============================================END")
+        print("\n\n")
+
+    def fww(self,fwbutton):
+        print("=============================================FORWARD CLASSS")
+        print(self.page().history())
+        print(self.page().history().canGoForward())
+        print(self.page().history().count())
+        if self.page().history().canGoForward():
+            print("CAN GO FORWARD AND GOIND")
+            self.page().history().forward()
+        else:
+            rMyIcon = QtGui.QPixmap("forward_d.png");
+            rMyIcon.setMaximumWidtht=50
+            fwbutton.setIcon(QtGui.QIcon(rMyIcon))
+            fwbutton.setIconSize(QtCore.QSize(20,20))
+            print("CANNOT GO FORWARD ")        
+        print("===============================================END")
+        print("\n\n")
+
+    def __init__(self, config,Ui,change ,parent=None, **kwargs):
         """Constructor for the class"""
-        super(WcgWebView, self).__init__(parent)
+        super(CusTomWebview, self).__init__(parent)
+        self.ui=Ui
+        self.change=change
         self.kwargs = kwargs
         self.config = config
+        self.loadProgress.connect(self.progress)
         self.nam = (kwargs.get('networkAccessManager')
                     or WcgNetworkAccessManager())
         self.setPage(WCGWebPage(config=config))
         self.page().setNetworkAccessManager(self.nam)
         self.settings().setAttribute(
             QWebSettings.JavascriptCanOpenWindows,
-            config.get("allow_popups")
+            config.get("allow_popups").get("default")
         )
+        print("========================================HERE")
         if config.get('user_css'):
-            self.settings().setUserStyleSheetUrl(QUrl(config.get('user_css')))
+            self.settings().setUserStyleSheetUrl(QUrl(config.get('user_css').get("default")))
         # JavascriptCanCloseWindows is in the API documentation,
         # but apparently only exists after 4.8
         if QT_VERSION_STR >= '4.8':
             self.settings().setAttribute(
                 QWebSettings.JavascriptCanCloseWindows,
-                config.get("allow_popups")
+                config.get("allow_popups").get("default")
             )
         self.settings().setAttribute(
             QWebSettings.PrivateBrowsingEnabled,
-            config.get("privacy_mode")
+            config.get("privacy_mode").get("default")
         )
         self.settings().setAttribute(QWebSettings.LocalStorageEnabled, True)
         self.settings().setAttribute(
             QWebSettings.PluginsEnabled,
-            config.get("allow_plugins")
+            config.get("allow_plugins").get("default")
         )
         self.page().setForwardUnsupportedContent(
-            config.get("allow_external_content")
+            config.get("allow_external_content").get("default")
         )
-        self.setZoomFactor(config.get("zoom_factor"))
+        self.setZoomFactor(config.get("zoom_factor").get("default"))
 
         # add printing to context menu if it's allowed
-        if config.get("allow_printing"):
+        if config.get("allow_printing").get("default"):
             self.print_action = QAction("Print", self)
             self.print_action.setIcon(QIcon.fromTheme("document-print"))
             self.print_action.triggered.connect(self.print_webpage)
@@ -1296,9 +1421,9 @@ class WcgWebView(QWebView):
             self.print_action.setToolTip("Print this web page")
 
         # Set up the proxy if there is one set
-        if config.get("proxy_server"):
-            if ":" in config["proxy_server"]:
-                proxyhost, proxyport = config["proxy_server"].split(":")
+        if config.get("proxy_server").get("default"):
+            if ":" in config["proxy_server"].default:
+                proxyhost, proxyport = config["proxy_server"].default.split(":")
             else:
                 proxyhost = config["proxy_server"]
                 proxyport = 8080
@@ -1306,7 +1431,7 @@ class WcgWebView(QWebView):
                 QNetworkProxy.HttpProxy, proxyhost, int(proxyport)
             ))
 
-        # connections for wcgwebview
+        # connections for customwebview
         self.page().networkAccessManager().authenticationRequired.connect(
             self.auth_dialog
         )
@@ -1316,7 +1441,30 @@ class WcgWebView(QWebView):
             self.sslErrorHandler
         )
         self.urlChanged.connect(self.onLinkClick)
-        self.loadFinished.connect(self.onLoadFinished)
+        def load_done():
+            self.ui.status_txt1.hide()
+            """ this is done to back and forward button images when webview has finished loading new url """
+            if not self.change:
+                return
+            if self.page().history().canGoBack():
+                rMyIcon = QtGui.QPixmap("back.png");
+                self.ui.backbutton.setIcon(QtGui.QIcon(rMyIcon))
+                self.ui.backbutton.setIconSize(QtCore.QSize(20,20))
+            else:
+                rMyIcon = QtGui.QPixmap("back_d.png");
+                self.ui.backbutton.setIcon(QtGui.QIcon(rMyIcon))
+                self.ui.backbutton.setIconSize(QtCore.QSize(20,20))
+            if self.page().history().canGoForward():
+                rMyIcon = QtGui.QPixmap("forward.png");
+                self.ui.fwbutton.setIcon(QtGui.QIcon(rMyIcon))
+                self.ui.fwbutton.setIconSize(QtCore.QSize(20,20))
+            else:
+                rMyIcon = QtGui.QPixmap("forward_d.png");
+                self.ui.fwbutton.setIcon(QtGui.QIcon(rMyIcon))
+                self.ui.fwbutton.setIconSize(QtCore.QSize(20,20))
+            print("Load done")
+
+        self.loadFinished.connect(load_done)
 
     def createWindow(self, type):
         """Handle requests for a new browser window.
@@ -1325,9 +1473,9 @@ class WcgWebView(QWebView):
         (e.g., <a target='_blank'> or window.open()).
         Overridden from QWebView to allow for popup windows, if enabled.
         """
-        if self.config.get("allow_popups"):
+        if self.config.get("allow_popups").get("default"):
             self.kwargs["networkAccessManager"] = self.nam
-            self.popup = WcgWebView(
+            self.popup = CusTomWebview(
                 self.config,
                 **self.kwargs
             )
@@ -1349,6 +1497,7 @@ class WcgWebView(QWebView):
         Overridden from QWebView,
         to provide right-click functions according to user settings.
         """
+        return
         menu = QMenu(self)
         for action in [
                 QWebPage.Back, QWebPage.Forward,
@@ -1357,7 +1506,7 @@ class WcgWebView(QWebView):
             action = self.pageAction(action)
             if action.isEnabled():
                 menu.addAction(action)
-        if self.config.get("allow_printing"):
+        if self.config.get("allow_printing").get("default"):
             menu.addAction(self.print_action)
         menu.exec_(event.globalPos())
 
@@ -1368,7 +1517,7 @@ class WcgWebView(QWebView):
         Called whenever the browser encounters an SSL error.
         Checks the ssl_mode and responds accordingly.
         """
-        if self.config.get("ssl_mode") == 'ignore':
+        if self.config.get("ssl_mode").get("default") == 'ignore':
             reply.ignoreSslErrors()
             debug("SSL error ignored")
             debug(", ".join([str(error.errorString()) for error in errorList]))
@@ -1376,7 +1525,7 @@ class WcgWebView(QWebView):
             self.setHtml(
                 CERTIFICATE_ERROR.format(
                     url=reply.url().toString(),
-                    start_url=self.config.get("start_url")
+                    start_url=self.config.get("start_url").get("default")
                 ))
 
     def auth_dialog(self, reply, authenticator):
@@ -1387,13 +1536,20 @@ class WcgWebView(QWebView):
         but for now we just use the default credentials from the config file.
         """
         debug("Auth required on {}".format(reply.url().toString()))
-        default_user = self.config.get("default_user")
-        default_password = self.config.get("default_password")
+        default_user = self.config.get("default_user").get("default")
+        default_password = self.config.get("default_password").get("default")
         if (default_user):
             authenticator.setUser(default_user)
         if (default_password):
             authenticator.setPassword(default_password)
-
+    def progress(self,a):
+        if 1<a<99:
+            self.ui.status_txt1.show()
+        else:
+            self.ui.status_txt1.hide()
+        print("========================================PROGRESSSS")
+        print(a)
+        print("\n\n\n\n")
     def download(self, request):
         """Handle a download request
 
@@ -1469,7 +1625,7 @@ class WcgWebView(QWebView):
             myfile.close()
             subprocess.Popen([
                 (self.config.get("content_handlers")
-                 .get(str(self.content_type))),
+                 .get(str(self.content_type)).get("default")),
                 myfile.fileName()
             ])
 
@@ -1490,16 +1646,16 @@ class WcgWebView(QWebView):
             # If whitelisting is enabled, and this isn't the start_url host,
             # check the url to see if the host's domain matches.
             if (
-                self.config.get("whitelist")
+                self.config.get("whitelist").get("default")
                 and not (url.host() ==
-                         QUrl(self.config.get("start_url")).host())
+                         QUrl(self.config.get("start_url").get("default")).host())
                 and not str(url.toString()) == 'about:blank'
             ):
                 site_ok = False
                 pattern = re.compile(str("(^|.*\.)(" + "|".join(
                     [re.escape(w)
                      for w
-                     in self.config.get("whitelist")]
+                     in self.config.get("whitelist").get("default")]
                 ) + ")$"))
                 debug("Whitelist pattern: {}".format(pattern.pattern))
                 if re.match(pattern, url.host()):
@@ -1508,7 +1664,7 @@ class WcgWebView(QWebView):
                     debug("Site violates whitelist: {}, {}".format(
                         url.host(), url.toString())
                     )
-                    self.setHtml(self.config.get("page_unavailable_html")
+                    self.setHtml(self.config.get("page_unavailable_html").get("default")
                                  .format(**self.config))
             if not url.isValid():
                 debug("Invalid URL {}".format(url.toString()))
@@ -1530,23 +1686,25 @@ class WcgWebView(QWebView):
 
         # Check the WcgNetworkAccessManager's failed_urls to see if our requested
         # url failed to load.  If it's not in there, load anyway.
+        print("==========DEBUG ON LOAD isFinished new new ")
+        print(str(ok))
         if not ok:
             if self.url().toString() not in self.nam.failed_urls:
                 ok = True
         if not ok:
             if (
-                self.url().host() == QUrl(self.config.get("start_url")).host()
+                self.url().host() == QUrl(self.config.get("start_url").get("default")).host()
                 and str(self.url().path()).rstrip("/") ==
-                    str(QUrl(self.config.get("start_url")).path()).rstrip("/")
+                    str(QUrl(self.config.get("start_url").get("default")).path()).rstrip("/")
             ):
-                self.setHtml(self.config.get("network_down_html")
+                self.setHtml(self.config.get("network_down_html").get("default")
                              .format(**self.config), QUrl())
                 debug("Start Url doesn't seem to be available;"
                       " displaying error")
             else:
                 debug("**PAGE LOAD FAILED, URL: {}" .format(self.url().toString()))
                 self.setHtml(
-                    self.config.get("page_unavailable_html")
+                    self.config.get("page_unavailable_html").get("default")
                     .format(**self.config), QUrl()
                 )
         self.nam.reset_failed_urls()
@@ -1623,7 +1781,7 @@ class WcgWebView(QWebView):
         self.print_(printer)
         return True
 
-# ### END WCGWEBVIEW DEFINITION ### #
+# ### END CUSTOMWEBVIEW DEFINITION ### #
 
 # ### WCGWEBPAGE #### #
 
@@ -1633,6 +1791,8 @@ class WCGWebPage(QWebPage):
 
     This was subclassed so that some functions can be overridden.
     """
+    def pageAction(self,a):
+        super.pageAction(a)
     def __init__(self, parent=None, config=None):
         """Constructor for the class"""
         super(WCGWebPage, self).__init__(parent)
@@ -1654,15 +1814,15 @@ class WCGWebPage(QWebPage):
         Overridden from QWebPage so that we can (if configured)
         force yes/no on these dialogs.
         """
-        if self.config.get("force_js_confirm") == "accept":
+        if self.config.get("force_js_confirm").get("default") == "accept":
             return True
-        elif self.config.get("force_js_confirm") == "deny":
+        elif self.config.get("force_js_confirm").get("default") == "deny":
             return False
         else:
             return QWebPage.javaScriptConfirm(self, frame, msg)
 
     def javaScriptAlert(self, frame, msg):
-        if not self.config.get("suppress_alerts"):
+        if not self.config.get("suppress_alerts").get("default"):
             return QWebPage.javaScriptAlert(self, frame, msg)
 
     def userAgentForUrl(self, url):
@@ -1671,7 +1831,7 @@ class WCGWebPage(QWebPage):
         Overridden from QWebPage so we can force a user agent from the config.
         """
         return (
-            self.config.get("user_agent")
+            self.config.get("user_agent").get("default")
             or QWebPage.userAgentForUrl(self, url)
         )
 
@@ -1724,7 +1884,7 @@ if __name__ == "__main__":
     fp.close()
     if os.path.isfile(os.path.expanduser(".\\testForm_prov1")):
         default_config_file = os.path.expanduser(".\\config_file.yaml")
-        print("ravi_hello 11")
+        print(",_hello 11")
         print(default_config_file)
     elif os.path.isfile("/etc/wcgbrowser.yaml"):
         print("hello 12")
