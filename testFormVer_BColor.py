@@ -185,7 +185,7 @@ class Ui_MainWindow(object):
         self.label_provImage.setLayoutDirection(QtCore.Qt.RightToLeft)
         self.label_provImage.setStyleSheet("")
         self.label_provImage.setText("")
-        self.label_provImage.setPixmap(QtGui.QPixmap("/icons/ProvLogoMain.png"))
+        self.label_provImage.setPixmap(QtGui.QPixmap("./icons/ProvLogoMain.png"))
         self.label_provImage.show()
         self.label_provImage.setAlignment(QtCore.Qt.AlignCenter)
         self.label_provImage.setWordWrap(True)
