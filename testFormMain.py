@@ -63,10 +63,11 @@ class Ui_MainWindow(object):
         self.search_option = QtGui.QWidget()
         self.search_option.setObjectName("search_option")
         self.lineEdit = QtGui.QLineEdit(self.search_option)
-        self.lineEdit.setGeometry(QtCore.QRect(0, 0, 771, 20))
+        self.lineEdit.setGeometry(QtCore.QRect(0, 0, 0,0))
         self.lineEdit.setObjectName("lineEdit")
         self.lineEdit.setReadOnly(True) # this is used to make linedit readable only.
-        self.tabWidget.addTab(self.search_option, "")
+        #self.tabWidget.addTab(self.search_option, "")
+        
         self.gridLayout.addWidget(self.tabWidget, 0, 0, 1, 1)
         self.verticalLayout.addLayout(self.gridLayout)
         MainWindow.setCentralWidget(self.centralwidget)

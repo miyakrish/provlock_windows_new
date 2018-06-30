@@ -178,7 +178,8 @@ hub, or wall panel are secure</li>
 <li>Restart the computer</li>
 <li>Ensure other systems at your location can access the same URL</li>
 </ul>
-<p>If you continue to get this error, contact technical support</p> """
+<p>If you continue t
+o get this error, contact technical support</p> """
 
 # This is shown when an https site has a bad certificate and ssl_mode is set
 # to "strict".
@@ -346,8 +347,10 @@ class AccessCode(QDialog):
     acCount=0
     eL=[]  
         
-    def __init__(self, options, parent=None):
+    def __init__(self, options,apprefer=None,window=None, parent=None):
         super(AccessCode, self).__init__(parent)
+        self.app=apprefer
+        self.window=window
         self.uiAc = Ui_Dialog()
         self.uiAc.setupUi(self)
         self.options = options
@@ -390,7 +393,8 @@ class AccessCode(QDialog):
             msg.exec_()
         else: 
             if AccessCode.acCount == 3:
-                exit()    
+                #exit()
+                print("QUITING=========================================================")   
             print("value of Access Code is {}".format(self.accessCode) )
             para["access_token"]=self.accessCode[0]
             print("para is {}".format(para))
@@ -418,31 +422,23 @@ class AccessCode(QDialog):
                     self.file = open(self.options.config_file, 'r')
                     configfile = yaml.safe_load(self.file )
                     self.parse_config(configfile, self.options)
+                    self.window.loadBookMarksAndBrowser()
+                    self.window.onLoadFinished()
+        
                     self.setModal(False)
                     self.file.close()
                     self.hide()
             elif jsonData['status'] == 'failed':
                 print("value of Access Code is {}".format(AccessCode.accessCode) )
                 self.setModal(True)
-
-                msg = QMessageBox()
-                msg.setIcon(QMessageBox.Critical)       
-        
-                flags = QMessageBox.Ok 
-                question = "ACCESS CODE"
-                response = cmsg.question(self, "Confirmation",question,flags)
-        
-                if response == QMessageBox.Ok:
-                    event.accept() 
                 #app.quit()
                 #return False
-                """
 
                 msg = QMessageBox()
                 msg.setIcon(QMessageBox.Critical)       
                 msg.setWindowTitle("ACCESS CODE")
                 msg.setWindowFlags(self.windowFlags() | Qt.WindowStaysOnTopHint)
-                msg.setStandardButtons(QMessageBox.Ok)"""
+                msg.setStandardButtons(QMessageBox.Ok)
                 # msg.setStyleSheet("background-color: rgb(255, 255, 255);\n"
                 #     "font: 8pt \"Roboto\";\n"
                 #     "border-width: 1px;\n"
@@ -459,7 +455,10 @@ class AccessCode(QDialog):
 
                 error_message = jsonData['msg']
                 if AccessCode.acCount == 2:
-                    error_message += (' ' + constants.MAXIMUM_ATTEMPT_REACHED)
+                    debug("ACESS CODE COUNT\n\n")
+                    debug(AccessCode.acCount)
+                    error_message += (' ' + str(3))
+                    self.app.quit()
                 msg.setText(error_message)
                 msg.show()
                 msg.exec_()
@@ -778,10 +777,11 @@ class MainWindow(QMainWindow ):
                                        rfg.width(), rfg.height())
         pixmap.save(filename+op, fileformat) 
                
-    def __init__(self, options, parent= None):
+    def __init__(self, options, app=None,parent= None):
         """Construct a MainWindow Object."""
         super(MainWindow, self).__init__(parent)
         # Load config file
+        self.app=app
         #pdb.set_trace()
         print(" loading configuration from '{}'".format(options))
         '''
@@ -909,6 +909,10 @@ class MainWindow(QMainWindow ):
                 msg.setText("Looks like  application {} is Open".format(proc.name().upper()))
                 msg.show()
                 msg.exec_()
+                try:
+                    proc.terminate()
+                except:
+                    pass
                 return True
                 
     def check_external_storage(self):
@@ -949,7 +953,7 @@ class MainWindow(QMainWindow ):
                 self.msg_net.setInformativeText("No Internet")
                 self.msg_net.setWindowTitle("ERROR!!!")
                 self.msg_net.setWindowFlags(self.windowFlags() | Qt.WindowStaysOnTopHint) #added by RSR
-                #msg.setDetailedText("The details are as follows:")
+                #.setDetailedText("The details are as follows:")
                 self.msg_net.setStandardButtons(QMessageBox.Ok)            
                 self.msg_net.setText("Ther is no internet conncection ")
                 self.msg_net.show()
@@ -957,9 +961,13 @@ class MainWindow(QMainWindow ):
                 print("No Internet==========================================")
             """
             a=socket.create_connection(("google.com",80))
-            self.msg_net.done(1)
+            try:
+                self.msg_net.done(1)
+            except:
+                pass
         except Exception as e:
             print("No Internet")
+            print(e)
             self.msg_net = QMessageBox()
             self.msg_net.setIcon(QMessageBox.Warning)       
             self.msg_net.setInformativeText("No Internet")
@@ -985,7 +993,7 @@ class MainWindow(QMainWindow ):
         self.uiMwin= Ui_MainWindow()
         self.uiMwin.setupUi(self)
         #self.uiMwin.centralwidget.setMouseTracking(True)
-        self.accessCode=AccessCode(options) #calling Access Code Class       
+        self.accessCode=AccessCode(options,app,self) #calling Access Code Class       
         #self.accessCode.setUpParameter()        
         #self.setWindowFlags(self.WindowDeactivate) # very important remove x button of window
         #self.showFullScreen()
@@ -1019,8 +1027,8 @@ class MainWindow(QMainWindow ):
         
         self.uiMwin.lineEdit.textChanged.connect(self.line_edit_text_changed)
         # self.uiMwin.Quit.clicked.connect(self.close)
-        self.accessCode.uiAc.pushButtonSubmit.clicked.connect(self.loadBookMarksAndBrowser)
-        self.accessCode.uiAc.pushButtonSubmit.clicked.connect(self.onLoadFinished)
+        #self.accessCode.uiAc.pushButtonSubmit.clicked.connect(self.loadBookMarksAndBrowser)
+        #self.accessCode.uiAc.pushButtonSubmit.clicked.connect(self.onLoadFinished)
         #self.uiAc.pushButtonSubmit.clicked.connect(self.callMainWindow)
         #self.accessCode.close()
         #self.tabWidget.clicked.connect(self.openTab)
@@ -2014,7 +2022,7 @@ if __name__ == "__main__":
     #pdb.set_trace()
     #accessCode=AccessCode(args)
        
-    mainwin = MainWindow(args) #args is input parameter here
+    mainwin = MainWindow(args,app) #args is input parameter here
     #myWidget = MyWidget()
     mainwin.setWindowTitle("PROVLOCK")
     app.installEventFilter(mainwin)

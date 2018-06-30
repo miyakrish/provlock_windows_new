@@ -1,6 +1,7 @@
 Restrictions:
   APPLICATION:
-  - {value: Notepad}
+  - {value: teamviewerMac}
+  - {value: chrome}
   BOOKMARKS:
   - {value: www.facebook.com}
   - {value: www.provnow.com}
@@ -14,7 +15,7 @@ Restrictions:
   PORT:
   - {value: USB}
   - {value: HDMI}
-access_id: 877
+access_id: 1034
 rule_id: '1'
 rule_name: basic
 status: success

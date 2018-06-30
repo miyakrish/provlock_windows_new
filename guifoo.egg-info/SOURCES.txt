@@ -1,0 +1,6 @@
+README.rst
+setup.py
+guifoo.egg-info/PKG-INFO
+guifoo.egg-info/SOURCES.txt
+guifoo.egg-info/dependency_links.txt
+guifoo.egg-info/top_level.txt

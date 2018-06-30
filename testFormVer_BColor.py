@@ -101,9 +101,27 @@ class Ui_MainWindow(object):
         self.bookMarkCombo.setFrame(True)
         self.bookMarkCombo.setObjectName("bookMarkCombo")
 
+        self.status_txt1 = QtGui.QLabel()
+        movie = QtGui.QMovie("loading.gif")
+        self.status_txt1.setMovie(movie)
+        movie.start()
+        self.status_txt1.setLayout(QtGui.QHBoxLayout())
+        self.status_txt1.setStyleSheet(
+            "border:none;\n"
+            "margin-right:0px;\n"
+            "position: absolute;\n"
+            # "left: 100px;\n"
+            "max-width: 60px!important;\n"
+            "min-width: 60px!important;\n"
+            "padding: 0px;\n"
+            "height: 60px!important;\n"
+        )
+        self.horizontalLayout.addWidget(self.status_txt1)
+        
+
         width=20
         self.backbutton=QtGui.QPushButton("");
-        rMyIcon = QtGui.QPixmap("back_d.png");
+        rMyIcon = QtGui.QPixmap("./back_d.png");
         rMyIcon.setMaximumWidtht=50
         self.backbutton.setIcon(QtGui.QIcon(rMyIcon))
         self.backbutton.setIconSize(QtCore.QSize(20,20))
@@ -150,23 +168,6 @@ class Ui_MainWindow(object):
             )
         self.horizontalLayout.addWidget(self.fwbutton)
         
-        self.status_txt1 = QtGui.QLabel()
-        movie = QtGui.QMovie("loading.gif")
-        self.status_txt1.setMovie(movie)
-        movie.start()
-        self.status_txt1.setLayout(QtGui.QHBoxLayout())
-        self.status_txt1.setStyleSheet(
-            "border:none;\n"
-            "margin-right:0px;\n"
-            "position: absolute;\n"
-            # "left: 100px;\n"
-            "float: right!important; \n"
-            "max-width: 100px!important;\n"
-            "min-width: 100px!important;\n"
-            "padding: 1px;\n"
-            "height: 22px!important;\n"
-        )
-        self.horizontalLayout.addWidget(self.status_txt1)
         
         self.horizontalLayout.addWidget( self.bookMarkCombo)
         # self.label_provImage = QtGui.QLabel(self.centralwidget)
@@ -238,7 +239,7 @@ class Ui_MainWindow(object):
         # self.tabWidget.setCornerWidget(self.Quit)
         self.formLayout = QtGui.QFormLayout(self.search_option)
         self.formLayout.setObjectName("formLayout")
-        self.lineEdit = QtGui.QLineEdit(self.search_option)
+        self.lineEdit = QtGui.QLineEdit()
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -252,7 +253,7 @@ class Ui_MainWindow(object):
         self.lineEdit.setFont(font)
         self.lineEdit.setReadOnly(True)
         self.lineEdit.setObjectName("lineEdit")
-        self.formLayout.setWidget(0, QtGui.QFormLayout.SpanningRole, self.lineEdit)
+        #self.formLayout.setWidget(0, QtGui.QFormLayout.SpanningRole, self.lineEdit)
         self.tabWidget.addTab(self.search_option, "")
         self.gridLayout.addWidget(self.tabWidget, 1, 0, 1, 1)
         # MainWindow.setCentralWidget(self.centralwidget)
