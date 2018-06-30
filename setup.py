@@ -24,7 +24,7 @@ build_exe_options = {
    'packages': ['PySide.QtXml','pyHook',"PySide"]
    }
 if 'bdist_msi' in sys.argv:
-	sys.argv+=["--initial-target-dir",'']
+	sys.argv+=["--initial-target-dir",r'%appdata%\\provolog']
 
 setup(name='ProvLock',
      version = '0.10',
