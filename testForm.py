@@ -17,16 +17,26 @@ from time import sleep
 import logging
 import os
 
+print(os.getcwd())
+
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
 formatter = logging.Formatter('%(asctime)s:%(levelname)s:%(name)s:%(message)s')
+try:
+    directory=os.environ["APPDATA"]+'\\Provlog'
+    os.stat(directory)
+except:
+    try:
+        os.mkdir(directory)
+    except:
+        print("directory not created")
 
-file_handler = logging.FileHandler('provLock.log')
+file_handler = logging.FileHandler(os.environ["APPDATA"]+'\\Provlog\\provLock.log')
 file_handler.setLevel(logging.DEBUG)
 file_handler.setFormatter(formatter)
 
-appNum_handler = logging.FileHandler('ApplicationRuning.log','w')
+appNum_handler = logging.FileHandler(os.environ["APPDATA"]+'\\Provlog\\ApplicationRuning.log','w')
 appNum_handler.setLevel(logging.ERROR)
 appNum_handler.setFormatter(formatter)
 
@@ -415,11 +425,11 @@ class AccessCode(QDialog):
                 configfile = {}
                 if self.options.config_file: 
                     print("loading configuration from 22")
-                    self.file = open("config_file.yaml", 'w')
+                    self.file = open(os.environ["APPDATA"]+'\\Provlog\\config_file.yaml', 'w')
                     self.file.seek(0,2)
                     yaml.safe_dump(jsonData, self.file)
                     self.file.close()
-                    self.file = open(self.options.config_file, 'r')
+                    self.file = open(os.environ["APPDATA"]+'\\Provlog\\config_file.yaml', 'r')
                     configfile = yaml.safe_load(self.file )
                     self.parse_config(configfile, self.options)
                     self.window.loadBookMarksAndBrowser()
@@ -589,18 +599,22 @@ class MainWindow(QMainWindow ):
         
        
     def activityLog(self,keypUser):
-        if config.get("access_id"):
-                access_log_id= config.get("access_id")
-                activity['access_log_id']=access_log_id
-                activity['activity']=keypUser
-                now = datetime.datetime.now()
-                performed_on=str(now.strftime("%a, %Y-%m-%d %H:%M:%S"))
-                activity['performed_on']=performed_on
-                resAct = requests.post("http://tachetechnologies.com/provApi/provConsole/api/v1/insertAccessActivity",data=json.dumps(activity))
-                resActjson=resAct.json()
-                print("activity data is {}".format(activity))
-                print("jasonData is escape {}".format(resActjson))
-                print("status is escape {}".format(resActjson['status']))
+        try:
+            if config.get("access_id"):
+                    access_log_id= config.get("access_id")
+                    activity['access_log_id']=access_log_id
+                    activity['activity']=keypUser
+                    now = datetime.datetime.now()
+                    performed_on=str(now.strftime("%a, %Y-%m-%d %H:%M:%S"))
+                    activity['performed_on']=performed_on
+                    resAct = requests.post("http://tachetechnologies.com/provApi/provConsole/api/v1/insertAccessActivity",data=json.dumps(activity))
+                    #resActjson=resAct.json()
+                    #print("activity data is {}".format(activity))
+                    #print("jasonData is escape {}".format(resActjson))
+                    #print("status is escape {}".format(resActjson['status']))
+        except Exception as e:
+            print("FROM ACTIVITY LOG ")
+            print(e)
     '''
     def keyPressEvent(self, e):
         if int(e.modifiers()) == (Qt.ControlModifier+Qt.AltModifier):
@@ -647,8 +661,9 @@ class MainWindow(QMainWindow ):
             #event.ignore()
             msg.setWindowFlags(self.windowFlags() | Qt.WindowStaysOnTopHint)
             
-            msg.exec_()                        
-            return True
+            msg.exec_() 
+            event.ignore()                       
+            return False
             #print("Hello , window is PRESSED")
             #event.accept()
         elif (event.type() == QEvent.KeyPress and event.key()== Qt.Key_Bluetooth):
@@ -687,7 +702,7 @@ class MainWindow(QMainWindow ):
             #self.setWindowFlags(self.windowFlags() | Qt.WindowStaysOnTopHint) #added by RSR
             msg.setWindowFlags(self.windowFlags() | Qt.WindowStaysOnTopHint)
             msg.exec_()            
-            return True
+            return False
                 
             #return super(MainWindow, self).eventFilter(self, event)
         else:
@@ -756,7 +771,7 @@ class MainWindow(QMainWindow ):
         #sleep(400)
         return fg.translated(-g.left(),-g.top())
     def mkDirForScreenCapture(self):
-        self.dirName='MyScreenShot'
+        self.dirName=os.environ["APPDATA"]+'\\Provlog\\MyScreenShot'
         if not os.path.exists(self.dirName):
             #os.makedirs(directory)
             os.mkdir( self.dirName)
@@ -782,6 +797,7 @@ class MainWindow(QMainWindow ):
         super(MainWindow, self).__init__(parent)
         # Load config file
         self.app=app
+        self.listApp=None
         #pdb.set_trace()
         print(" loading configuration from '{}'".format(options))
         '''
@@ -791,7 +807,7 @@ class MainWindow(QMainWindow ):
         myWindowUi = loader.load(uifile)
         uifile.close()  
         '''      
-        
+        self.options=options
         self.installEventFilter(self)
         self.setWindowTitle("PROVLOCK")       
         self.setMouseTracking(True) # for mouse movement tracking
@@ -880,7 +896,7 @@ class MainWindow(QMainWindow ):
         print ('Message:{}'.format(event.Message))
         print ('Time:{}'.format(event.Time))
         print ('Window:{}'.format(event.Window))
-        print ('WindowName:{}'.format(event.WindowName))
+        print ('WindowName:{}.format(event.WindowName))
         print ('Ascii:{}', event.Ascii, chr(event.Ascii))
         print ('Key:{}'.format(event.Key))
         print ('KeyID:', event.KeyID)
@@ -889,6 +905,7 @@ class MainWindow(QMainWindow ):
         print ('Alt{}'.format(event.Alt))
         print ('Transition', event.Transition)
         '''
+        print(event.Key.lower())
         if event.Key.lower() in ['lwin', 'tab', 'lmenu']:
             return False    # block these keys
         else:
@@ -896,9 +913,17 @@ class MainWindow(QMainWindow ):
             return True       
     
     def process_exists(self):
-        listApp = ['chrome.exe','firefox.exe','Skype.exe', 'TeamViewer.exe', 'LyncMonitor.exe']
+        if self.listApp==None:
+            self.listApp=[]
+            print("\n=====================OPTIONS PROCESS")
+            apps=config.get("Restrictions").items()[1][1]
+            for a1 in apps:
+                self.listApp.append(a1.get("value").lower())
+            print("\n\n=========")
+        print(self.listApp)
+        #listApp = ['chrome.exe','firefox.exe','Skype.exe', 'TeamViewer.exe', 'LyncMonitor.exe']
         for proc in psutil.process_iter():
-            if proc.name() in listApp:
+            if proc.name().lower() in self.listApp:
                 msg = QMessageBox()
                 msg.setIcon(QMessageBox.Warning)       
                 msg.setInformativeText("The Application will be closed forcefully")
@@ -913,7 +938,7 @@ class MainWindow(QMainWindow ):
                     proc.terminate()
                 except:
                     pass
-                return True
+                #return True
                 
     def check_external_storage(self):
         usb_command = "wmic path CIM_LogicalDevice where \"Description like 'USB%'\" get /value"
@@ -1112,6 +1137,15 @@ class MainWindow(QMainWindow ):
         hm = pyHook.HookManager()
         print ('hm is:{}'.format(hm))
         # watch for all keyboard events
+
+        def OnKeyboardEvent1(event):
+            print("========================PYHOOOK NEW")
+            print(event.Key.lower())
+            if event.Key.lower() in ['lwin', 'tab', 'lmenu']:
+                return False    # block these keys
+            else:
+                # return True to pass the event to other handlers
+                return True
         hm.KeyDown = self.OnKeyboardEvent
         # set the hook
         #print ("hm.KeyDown:{}".format(hm.KeyDown))
@@ -1559,9 +1593,7 @@ class CusTomWebview(QWebView):
             self.ui.status_txt1.show()
         else:
             self.ui.status_txt1.hide()
-        print("========================================PROGRESSSS")
-        print(a)
-        print("\n\n\n\n")
+    
     def download(self, request):
         """Handle a download request
 
@@ -1891,11 +1923,11 @@ if __name__ == "__main__":
     #pdb.set_trace()
     curDir=os.getcwd()
     print(curDir)
-    fp=open('testForm_prov1','w')
+    fp=open(os.environ["APPDATA"]+'\\Provlog\\testForm_prov1','w')
     fp.write("python testForm.py -c config_file.yaml")
     fp.close()
-    if os.path.isfile(os.path.expanduser(".\\testForm_prov1")):
-        default_config_file = os.path.expanduser(".\\config_file.yaml")
+    if os.path.isfile(os.path.expanduser(os.environ["APPDATA"]+'\\Provlog\\testForm_prov1')):
+        default_config_file = os.path.expanduser(os.environ["APPDATA"]+'\\Provlog\\config_file.yaml')
         print(",_hello 11")
         print(default_config_file)
     elif os.path.isfile("/etc/wcgbrowser.yaml"):
@@ -2024,6 +2056,7 @@ if __name__ == "__main__":
        
     mainwin = MainWindow(args,app) #args is input parameter here
     #myWidget = MyWidget()
+    mainwin.setWindowFlags(QtCore.Qt.WindowStaysOnTopHint)
     mainwin.setWindowTitle("PROVLOCK")
     app.installEventFilter(mainwin)
     mainwin.showFullScreen()
